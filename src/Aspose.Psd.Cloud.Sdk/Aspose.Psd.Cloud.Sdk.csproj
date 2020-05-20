@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <SuppressDependenciesWhenPacking>false</SuppressDependenciesWhenPacking>
+    <AssemblyVersion>20.4.0.0</AssemblyVersion>
+    <FileVersion>20.4.0.0</FileVersion>
+    <Version>20.4.0</Version>
+    <DebugType>full</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Aspose.Psd.Cloud.Sdk.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Aspose.Psd-Cloud</PackageId>
+    <PackageVersion>20.4.0</PackageVersion>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTags>aspose psd cloud rest api sdk image psd reverse search image-effects image-filters deskewing image-crop image-rotate image-conversion image-metadata</PackageTags>
+    <PackageProjectUrl>https://github.com/aspose-psd-cloud/aspose-psd-cloud-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://www.aspose.cloud/templates/aspose/App_Themes/V3/images/imaging/272x272/aspose_imaging-for-net-min.png</PackageIconUrl>
+    <PackageReleaseNotes>https://docs.aspose.cloud/display/psdcloud/Aspose.Psd+Cloud+20.4+-+Release+Notes</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/aspose-psd-cloud/aspose-psd-cloud-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Title>Aspose.Psd Cloud .NET SDK</Title>
+    <Company>Aspose</Company>
+    <Authors>Aspose</Authors>
+    <ProductName>Aspose.Psd Cloud .NET SDK</ProductName>
+    <ProductVersion>20.4</ProductVersion>
+    <Description>      Aspose.Psd Cloud lets you use a REST API to inspect, convert, and transform images in the cloud; do reverse image search. It supports the most popular image formats such as PSD, PNG, GIF, BMP, TIFF, and JPEG, and conversion between them.
+
+      Aspose.Psd Cloud also provides a rich set of features for manipulating images on-the-fly with cloud based image transformations. You can resize, crop and/or rotate images various ways by simply creating a request that includes the correct transformation instructions.
+
+      The most demanding imaging routines, for example TIFF concatenation and image conversion to fax compatible format, are available through efficient and reliable specialized resources.
+
+      Reverse image search features include: search for sample image in the image set, duplicates recognition, search image by associated tags, etc. You can perform these operations without needing to know what's going on under the hood so that you can focus on the core business goals.</Description>
+    <Copyright>Copyright © 2002-2020 Aspose Pty Ltd. All Rights Reserved.</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Product>Aspose.Psd Cloud .NET SDK</Product>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../LICENSE" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.0'">
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+  </ItemGroup>
+
+  <Target Name="SignAndVerify" BeforeTargets="Pack" Condition="'$(Configuration)' == 'Release'">
+    <Exec Command="signtool.exe sign /f C:\Workspace\Aspose.pfx /p &quot;$(CertificatePassword)&quot; /tr http://sha256timestamp.ws.symantec.com/sha256/timestamp C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\net20\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="signtool.exe sign /f C:\Workspace\Aspose.pfx /p &quot;$(CertificatePassword)&quot; /tr http://sha256timestamp.ws.symantec.com/sha256/timestamp C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\net35\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="signtool.exe sign /f C:\Workspace\Aspose.pfx /p &quot;$(CertificatePassword)&quot; /tr http://sha256timestamp.ws.symantec.com/sha256/timestamp C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\net4\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="signtool.exe sign /f C:\Workspace\Aspose.pfx /p &quot;$(CertificatePassword)&quot; /tr http://sha256timestamp.ws.symantec.com/sha256/timestamp C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\net45\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="signtool.exe sign /f C:\Workspace\Aspose.pfx /p &quot;$(CertificatePassword)&quot; /tr http://sha256timestamp.ws.symantec.com/sha256/timestamp C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\netstandard2.0\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="sn.exe -v C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\net20\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="sn.exe -v C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\net35\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="sn.exe -v C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\net4\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="sn.exe -v C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\net45\Aspose.Psd.Cloud.Sdk.dll" />
+    <Exec Command="sn.exe -v C:\Workspace\aspose-psd-cloud-dotnet\src\Aspose.Psd.Cloud.Sdk\bin\Release\netstandard2.0\Aspose.Psd.Cloud.Sdk.dll" />
+  </Target>
+
+</Project>
