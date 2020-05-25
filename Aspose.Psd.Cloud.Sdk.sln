@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Psd.Cloud.Sdk", "src\Aspose.Psd.Cloud.Sdk\Aspose.Psd.Cloud.Sdk.csproj", "{834E3ED8-277C-4DC4-8669-34186548FFDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Psd.Cloud.Sdk.Test", "src\Aspose.Psd.Cloud.Sdk.Test\Aspose.Psd.Cloud.Sdk.Test.csproj", "{FC6F987A-CB6E-4BF2-A74C-B3E6DFEA7A0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{834E3ED8-277C-4DC4-8669-34186548FFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{834E3ED8-277C-4DC4-8669-34186548FFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{834E3ED8-277C-4DC4-8669-34186548FFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6F987A-CB6E-4BF2-A74C-B3E6DFEA7A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6F987A-CB6E-4BF2-A74C-B3E6DFEA7A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6F987A-CB6E-4BF2-A74C-B3E6DFEA7A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6F987A-CB6E-4BF2-A74C-B3E6DFEA7A0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
