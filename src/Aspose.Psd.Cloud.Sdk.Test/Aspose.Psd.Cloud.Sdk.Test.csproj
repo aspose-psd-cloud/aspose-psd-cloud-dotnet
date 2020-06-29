@@ -4,7 +4,7 @@
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <TestProjectType>UnitTest</TestProjectType>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFrameworks>netcoreapp2.0;net20</TargetFrameworks>
   </PropertyGroup>
   
   <PropertyGroup>
@@ -34,8 +34,8 @@
   
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
-    <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
   </ItemGroup>
 </Project>

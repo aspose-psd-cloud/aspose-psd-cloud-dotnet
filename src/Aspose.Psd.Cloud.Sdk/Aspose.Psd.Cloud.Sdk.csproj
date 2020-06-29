@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -10,7 +10,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Aspose.Psd.Cloud.Sdk.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net20;net35;net4;net45;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
