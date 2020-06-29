@@ -26,7 +26,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
 using Aspose.Psd.Cloud.Sdk.Client.Internal.RequestHandlers;
@@ -232,7 +231,7 @@ namespace Aspose.Psd.Cloud.Sdk.Client.Internal
         /// <returns>Prepared request.</returns>
         /// <exception cref="Aspose.Psd.Cloud.Sdk.Client.ApiException">500 - unknown method type</exception>
         private WebRequest PrepareRequest(string path, string method, Dictionary<string, object> formParams,
-            IReadOnlyDictionary<string, string> headerParams, string body, string contentType)
+            Dictionary<string, string> headerParams, string body, string contentType)
         {
             var client = WebRequest.Create(path.Replace(" ", "%20"));
             client.Method = method;
@@ -256,9 +255,13 @@ namespace Aspose.Psd.Cloud.Sdk.Client.Internal
                 foreach (var headerParamsItem in headerParams)
                     client.Headers.Add(headerParamsItem.Key, headerParamsItem.Value);
 
-                foreach (var defaultHeaderMapItem in _defaultHeaderMap.Where(defaultHeaderMapItem =>
-                    !headerParams.ContainsKey(defaultHeaderMapItem.Key)))
-                    client.Headers.Add(defaultHeaderMapItem.Key, defaultHeaderMapItem.Value);
+                foreach (var defaultHeaderMapItem in _defaultHeaderMap)
+                {
+                    if (!headerParams.ContainsKey(defaultHeaderMapItem.Key))
+                    {
+                        client.Headers.Add(defaultHeaderMapItem.Key, defaultHeaderMapItem.Value);
+                    }
+                }
 
                 _requestHandlers.ForEach(p => p.BeforeSend(client, content));
 
