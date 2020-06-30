@@ -43,8 +43,8 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
         /// <param name="bkColor">Background color</param>
         /// <param name="additionalExportFormats">Additional formats to export to</param>
         [Test]
-        [TestCase(true, true)]
-        [TestCase(false, false)]
+        [TestCase(true, true, null)]
+        [TestCase(false, false, null)]
         [TestCase(false, true, "green")]
         public void CreateDeskewedImageTest(
             bool saveResultToStorage,
@@ -96,8 +96,8 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
         /// <param name="bkColor">Background color</param>
         /// <param name="additionalExportFormats">Additional formats to export to</param>
         [Test]
-        [TestCase(true)]
-        [TestCase(false)]
+        [TestCase(true, null)]
+        [TestCase(false, null)]
         [TestCase(false, "green")]
         public void DeskewImageTest(bool resizeProportionally, string bkColor = null,
             params string[] additionalExportFormats)
