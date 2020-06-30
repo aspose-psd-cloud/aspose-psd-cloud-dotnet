@@ -54,7 +54,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
         {
             var formatsToExport = new List<string>(BasicExportFormats);
             foreach (var additionalExportFormat in additionalExportFormats)
-                if (!formatsToExport.Contains(additionalExportFormat))
+                if (additionalExportFormat != null && !formatsToExport.Contains(additionalExportFormat))
                     formatsToExport.Add(additionalExportFormat);
 
             foreach (var inputFile in InputTestFiles)
@@ -104,7 +104,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
         {
             var formatsToExport = new List<string>(BasicExportFormats);
             foreach (var additionalExportFormat in additionalExportFormats)
-                if (!formatsToExport.Contains(additionalExportFormat))
+                if (additionalExportFormat != null && !formatsToExport.Contains(additionalExportFormat))
                     formatsToExport.Add(additionalExportFormat);
 
             foreach (var inputFile in InputTestFiles)
