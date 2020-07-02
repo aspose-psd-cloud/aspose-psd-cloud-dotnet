@@ -73,7 +73,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             new CreateRotateFlippedImageRequest(inputStream, method, format, outPath, storage);
                         return PsdApi.CreateRotateFlippedImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         try
                         {
@@ -126,7 +126,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             new RotateFlipImageRequest(inputFile.Name, method, format, folder, storage);
                         return PsdApi.RotateFlipImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         try
                         {

@@ -76,7 +76,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             outPath, storage);
                         return PsdApi.CreateCroppedImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         Assert.AreEqual(width, resultProperties.Width);
                         Assert.AreEqual(height, resultProperties.Height);
@@ -118,7 +118,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             storage);
                         return PsdApi.CropImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         Assert.AreEqual(width, resultProperties.Width);
                         Assert.AreEqual(height, resultProperties.Height);

@@ -73,7 +73,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             outPath, storage);
                         return PsdApi.CreateResizedImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         Assert.AreEqual(newWidth, resultProperties.Width);
                         Assert.AreEqual(newHeight, resultProperties.Height);
@@ -112,7 +112,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             storage);
                         return PsdApi.ResizeImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         Assert.AreEqual(newWidth, resultProperties.Width);
                         Assert.AreEqual(newHeight, resultProperties.Height);

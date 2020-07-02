@@ -79,7 +79,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             rectWidth, rectHeight, rotateFlipMethod, format, outPath, storage);
                         return PsdApi.CreateUpdatedImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         Assert.AreEqual(rectHeight, resultProperties.Width);
                         Assert.AreEqual(rectWidth, resultProperties.Height);
@@ -124,7 +124,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             rectHeight, rotateFlipMethod, format, folder, storage);
                         return PsdApi.UpdateImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         Assert.AreEqual(rectHeight, resultProperties.Width);
                         Assert.AreEqual(rectWidth, resultProperties.Height);

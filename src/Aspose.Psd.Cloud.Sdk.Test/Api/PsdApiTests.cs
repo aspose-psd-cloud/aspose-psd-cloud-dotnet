@@ -66,7 +66,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                         fromScratch, outPath, storage);
                     return PsdApi.CreateModifiedPsd(request);
                 },
-                delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                 {
                     Assert.NotNull(resultProperties.PsdProperties);
                     Assert.AreEqual(compressionMethod, resultProperties.PsdProperties.Compression.ToLower());
@@ -105,7 +105,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                         folder, storage);
                     return PsdApi.ModifyPsd(request);
                 },
-                delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                 {
                     Assert.NotNull(resultProperties.PsdProperties);
                     Assert.AreEqual(compressionMethod, resultProperties.PsdProperties.Compression.ToLower());

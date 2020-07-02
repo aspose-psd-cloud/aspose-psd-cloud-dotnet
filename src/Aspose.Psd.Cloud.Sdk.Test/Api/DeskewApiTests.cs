@@ -71,7 +71,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             outPath, TestStorage);
                         return PsdApi.CreateDeskewedImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties,
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties,
                         Stream resultStream)
                     {
                         if (!saveResultToStorage)
@@ -119,7 +119,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                             TestStorage);
                         return PsdApi.DeskewImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         Assert.NotNull(resultStream);
                         Assert.IsTrue(resultStream.Length > 0);

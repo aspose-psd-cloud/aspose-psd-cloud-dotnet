@@ -98,7 +98,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
         /// <summary>
         ///     Aspose.Psd API
         /// </summary>
-        protected PsdApi PsdApi;
+        protected ImagingApi PsdApi;
 
         /// <summary>
         ///     The temporary folder
@@ -220,8 +220,8 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
             WriteLineEverywhere($"Base URL: {baseUrl}");
             WriteLineEverywhere($"API version: {apiVersion}");
             PsdApi = onPremise
-                ? new PsdApi(baseUrl, apiVersion, false)
-                : new PsdApi(appKey, appSid, baseUrl, apiVersion);
+                ? new ImagingApi(baseUrl, apiVersion, false)
+                : new ImagingApi(appKey, appSid, baseUrl, apiVersion);
 
             InputTestFiles = FetchInputTestFilesInfo();
         }
@@ -433,7 +433,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
                         PsdApi.DeleteFile(new DeleteFileRequest(outPath, storage));
                 }
 
-                PsdResponse resultProperties = null;
+                ImagingResponse resultProperties = null;
 
                 using (var response = invokeRequestAction.Invoke())
                 {
@@ -560,8 +560,8 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
         /// <param name="originalProperties">The original properties.</param>
         /// <param name="resultProperties">The result properties.</param>
         /// <param name="resultStream">The result stream.</param>
-        protected delegate void PropertiesTesterDelegate(PsdResponse originalProperties,
-            PsdResponse resultProperties, Stream resultStream);
+        protected delegate void PropertiesTesterDelegate(ImagingResponse originalProperties,
+            ImagingResponse resultProperties, Stream resultStream);
 
         /// <summary>
         ///     Typical POST request delegate that accepts input image stream.

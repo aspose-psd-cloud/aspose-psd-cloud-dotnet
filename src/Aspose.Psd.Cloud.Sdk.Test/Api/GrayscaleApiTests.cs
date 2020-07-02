@@ -64,7 +64,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                         var request = new CreateGrayscaledImageRequest(inputStream, outPath, TestStorage);
                         return PsdApi.CreateGrayscaledImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties,
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties,
                         Stream resultStream)
                     {
                         if (!saveResultToStorage)
@@ -105,7 +105,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
                         var request = new GrayscaleImageRequest(inputFile.Name, TempFolder, TestStorage);
                         return PsdApi.GrayscaleImage(request);
                     },
-                    delegate(PsdResponse originalProperties, PsdResponse resultProperties, Stream resultStream)
+                    delegate(ImagingResponse originalProperties, ImagingResponse resultProperties, Stream resultStream)
                     {
                         Assert.NotNull(resultStream);
                         Assert.IsTrue(resultStream.Length > 0);
