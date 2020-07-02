@@ -23,61 +23,62 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CopyFile" /> operation.
-    /// </summary>
-    public class CopyFileRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CopyFile" /> operation.
+  /// </summary>  
+  public class CopyFileRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CopyFileRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="CopyFileRequest"/> class.
+        /// </summary>        
         public CopyFileRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CopyFileRequest" /> class.
+        /// Initializes a new instance of the <see cref="CopyFileRequest"/> class.
         /// </summary>
         /// <param name="srcPath">Source file path e.g. &#39;/folder/file.ext&#39;</param>
         /// <param name="destPath">Destination file path</param>
         /// <param name="srcStorageName">Source storage name</param>
         /// <param name="destStorageName">Destination storage name</param>
         /// <param name="versionId">File version ID to copy</param>
-        public CopyFileRequest(string srcPath, string destPath, string srcStorageName = null,
-            string destStorageName = null, string versionId = null)
+        public CopyFileRequest(string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)             
         {
-            SrcPath = srcPath;
-            DestPath = destPath;
-            SrcStorageName = srcStorageName;
-            DestStorageName = destStorageName;
-            VersionId = versionId;
+            this.srcPath = srcPath;
+            this.destPath = destPath;
+            this.srcStorageName = srcStorageName;
+            this.destStorageName = destStorageName;
+            this.versionId = versionId;
         }
+        
+        /// <summary>
+        /// Source file path e.g. '/folder/file.ext'
+        /// </summary>  
+        public string srcPath { get; set; }
 
         /// <summary>
-        ///     Source file path e.g. '/folder/file.ext'
-        /// </summary>
-        public string SrcPath { get; set; }
+        /// Destination file path
+        /// </summary>  
+        public string destPath { get; set; }
 
         /// <summary>
-        ///     Destination file path
-        /// </summary>
-        public string DestPath { get; set; }
+        /// Source storage name
+        /// </summary>  
+        public string srcStorageName { get; set; }
 
         /// <summary>
-        ///     Source storage name
-        /// </summary>
-        public string SrcStorageName { get; set; }
+        /// Destination storage name
+        /// </summary>  
+        public string destStorageName { get; set; }
 
         /// <summary>
-        ///     Destination storage name
-        /// </summary>
-        public string DestStorageName { get; set; }
-
-        /// <summary>
-        ///     File version ID to copy
-        /// </summary>
-        public string VersionId { get; set; }
-    }
+        /// File version ID to copy
+        /// </summary>  
+        public string versionId { get; set; }
+  }
 }

@@ -23,37 +23,43 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     The convolution filter.
-    /// </summary>
-    public class ConvolutionFilterProperties : FilterPropertiesBase
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// The convolution filter.
+  /// </summary>  
+  public class ConvolutionFilterProperties : FilterPropertiesBase 
+  {                       
         /// <summary>
-        ///     Gets or sets the factor.
-        /// </summary>
+        /// Gets or sets the factor.
+        /// </summary>  
         public double? Factor { get; set; }
 
         /// <summary>
-        ///     Gets or sets the bias.
-        /// </summary>
+        /// Gets or sets the bias.
+        /// </summary>  
         public int? Bias { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class ConvolutionFilterProperties {\n");
-            sb.Append("  Factor: ").Append(Factor).Append("\n");
-            sb.Append("  Bias: ").Append(Bias).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class ConvolutionFilterProperties {\n");
+          sb.Append("  Factor: ").Append(this.Factor).Append("\n");
+          sb.Append("  Bias: ").Append(this.Bias).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

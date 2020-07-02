@@ -23,46 +23,48 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.DeleteFolder" /> operation.
-    /// </summary>
-    public class DeleteFolderRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.DeleteFolder" /> operation.
+  /// </summary>  
+  public class DeleteFolderRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="DeleteFolderRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="DeleteFolderRequest"/> class.
+        /// </summary>        
         public DeleteFolderRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="DeleteFolderRequest" /> class.
+        /// Initializes a new instance of the <see cref="DeleteFolderRequest"/> class.
         /// </summary>
         /// <param name="path">Folder path e.g. &#39;/folder&#39;</param>
         /// <param name="storageName">Storage name</param>
         /// <param name="recursive">Enable to delete folders, subfolders and files</param>
-        public DeleteFolderRequest(string path, string storageName = null, bool? recursive = null)
+        public DeleteFolderRequest(string path, string storageName = null, bool? recursive = null)             
         {
-            Path = path;
-            StorageName = storageName;
-            Recursive = recursive;
+            this.path = path;
+            this.storageName = storageName;
+            this.recursive = recursive;
         }
+        
+        /// <summary>
+        /// Folder path e.g. '/folder'
+        /// </summary>  
+        public string path { get; set; }
 
         /// <summary>
-        ///     Folder path e.g. '/folder'
-        /// </summary>
-        public string Path { get; set; }
+        /// Storage name
+        /// </summary>  
+        public string storageName { get; set; }
 
         /// <summary>
-        ///     Storage name
-        /// </summary>
-        public string StorageName { get; set; }
-
-        /// <summary>
-        ///     Enable to delete folders, subfolders and files
-        /// </summary>
-        public bool? Recursive { get; set; }
-    }
+        /// Enable to delete folders, subfolders and files
+        /// </summary>  
+        public bool? recursive { get; set; }
+  }
 }

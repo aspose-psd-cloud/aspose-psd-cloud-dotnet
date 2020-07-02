@@ -23,49 +23,55 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     Represents information about PSD image
-    /// </summary>
-    public class PsdProperties
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// Represents information about PSD image
+  /// </summary>  
+  public class PsdProperties 
+  {                       
         /// <summary>
-        ///     Gets or sets the bits per channel.
-        /// </summary>
+        /// Gets or sets the bits per channel.
+        /// </summary>  
         public int? BitsPerChannel { get; set; }
 
         /// <summary>
-        ///     Gets or sets the channels count.
-        /// </summary>
+        /// Gets or sets the channels count.
+        /// </summary>  
         public int? ChannelsCount { get; set; }
 
         /// <summary>
-        ///     Gets or sets the color mode.
-        /// </summary>
+        /// Gets or sets the color mode.
+        /// </summary>  
         public string ColorMode { get; set; }
 
         /// <summary>
-        ///     Gets or sets the compression.
-        /// </summary>
+        /// Gets or sets the compression.
+        /// </summary>  
         public string Compression { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class PsdProperties {\n");
-            sb.Append("  BitsPerChannel: ").Append(BitsPerChannel).Append("\n");
-            sb.Append("  ChannelsCount: ").Append(ChannelsCount).Append("\n");
-            sb.Append("  ColorMode: ").Append(ColorMode).Append("\n");
-            sb.Append("  Compression: ").Append(Compression).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class PsdProperties {\n");
+          sb.Append("  BitsPerChannel: ").Append(this.BitsPerChannel).Append("\n");
+          sb.Append("  ChannelsCount: ").Append(this.ChannelsCount).Append("\n");
+          sb.Append("  ColorMode: ").Append(this.ColorMode).Append("\n");
+          sb.Append("  Compression: ").Append(this.Compression).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

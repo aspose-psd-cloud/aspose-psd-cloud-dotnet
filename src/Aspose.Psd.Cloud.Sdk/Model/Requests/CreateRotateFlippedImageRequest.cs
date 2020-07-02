@@ -23,75 +23,62 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateRotateFlippedImage" /> operation.
-    /// </summary>
-    public class CreateRotateFlippedImageRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateRotateFlippedImage" /> operation.
+  /// </summary>  
+  public class CreateRotateFlippedImageRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateRotateFlippedImageRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="CreateRotateFlippedImageRequest"/> class.
+        /// </summary>        
         public CreateRotateFlippedImageRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateRotateFlippedImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateRotateFlippedImageRequest"/> class.
         /// </summary>
         /// <param name="imageData">Input image</param>
-        /// <param name="method">
-        ///     RotateFlip method (Rotate180FlipNone, Rotate180FlipX, Rotate180FlipXY, Rotate180FlipY,
-        ///     Rotate270FlipNone, Rotate270FlipX, Rotate270FlipXY, Rotate270FlipY, Rotate90FlipNone, Rotate90FlipX,
-        ///     Rotate90FlipXY, Rotate90FlipY, RotateNoneFlipNone, RotateNoneFlipX, RotateNoneFlipXY, RotateNoneFlipY).
-        /// </param>
-        /// <param name="format">
-        ///     Resulting image format. Please, refer to
-        ///     https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap
-        ///     for possible use-cases.
-        /// </param>
+        /// <param name="method">RotateFlip method (Rotate180FlipNone, Rotate180FlipX, Rotate180FlipXY, Rotate180FlipY, Rotate270FlipNone, Rotate270FlipX, Rotate270FlipXY, Rotate270FlipY, Rotate90FlipNone, Rotate90FlipX, Rotate90FlipXY, Rotate90FlipY, RotateNoneFlipNone, RotateNoneFlipX, RotateNoneFlipXY, RotateNoneFlipY).</param>
+        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
         /// <param name="outPath">Path to updated file (if this is empty, response contains streamed image).</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
-        public CreateRotateFlippedImageRequest(Stream imageData, string method, string format = null,
-            string outPath = null, string storage = null)
+        public CreateRotateFlippedImageRequest(System.IO.Stream imageData, string method, string format = null, string outPath = null, string storage = null)             
         {
-            ImageData = imageData;
-            Method = method;
-            Format = format;
-            OutPath = outPath;
-            Storage = storage;
+            this.imageData = imageData;
+            this.method = method;
+            this.format = format;
+            this.outPath = outPath;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Input image
+        /// </summary>  
+        public System.IO.Stream imageData { get; set; }
 
         /// <summary>
-        ///     Input image
-        /// </summary>
-        public Stream ImageData { get; set; }
+        /// RotateFlip method (Rotate180FlipNone, Rotate180FlipX, Rotate180FlipXY, Rotate180FlipY, Rotate270FlipNone, Rotate270FlipX, Rotate270FlipXY, Rotate270FlipY, Rotate90FlipNone, Rotate90FlipX, Rotate90FlipXY, Rotate90FlipY, RotateNoneFlipNone, RotateNoneFlipX, RotateNoneFlipXY, RotateNoneFlipY).
+        /// </summary>  
+        public string method { get; set; }
 
         /// <summary>
-        ///     RotateFlip method (Rotate180FlipNone, Rotate180FlipX, Rotate180FlipXY, Rotate180FlipY, Rotate270FlipNone,
-        ///     Rotate270FlipX, Rotate270FlipXY, Rotate270FlipY, Rotate90FlipNone, Rotate90FlipX, Rotate90FlipXY, Rotate90FlipY,
-        ///     RotateNoneFlipNone, RotateNoneFlipX, RotateNoneFlipXY, RotateNoneFlipY).
-        /// </summary>
-        public string Method { get; set; }
+        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
+        /// </summary>  
+        public string format { get; set; }
 
         /// <summary>
-        ///     Resulting image format. Please, refer to
-        ///     https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap
-        ///     for possible use-cases.
-        /// </summary>
-        public string Format { get; set; }
+        /// Path to updated file (if this is empty, response contains streamed image).
+        /// </summary>  
+        public string outPath { get; set; }
 
         /// <summary>
-        ///     Path to updated file (if this is empty, response contains streamed image).
-        /// </summary>
-        public string OutPath { get; set; }
-
-        /// <summary>
-        ///     Your Aspose Cloud Storage name.
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Your Aspose Cloud Storage name.
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

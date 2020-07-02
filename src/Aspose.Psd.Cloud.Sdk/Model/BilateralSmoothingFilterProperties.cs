@@ -23,55 +23,61 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     The Bilateral Smoothing Filter Options.
-    /// </summary>
-    public class BilateralSmoothingFilterProperties : FilterPropertiesBase
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// The Bilateral Smoothing Filter Options.
+  /// </summary>  
+  public class BilateralSmoothingFilterProperties : FilterPropertiesBase 
+  {                       
         /// <summary>
-        ///     Gets or sets the size of the kernel.
-        /// </summary>
+        /// Gets or sets the size of the kernel.
+        /// </summary>  
         public int? Size { get; set; }
 
         /// <summary>
-        ///     Gets or sets the spatial factor.
-        /// </summary>
+        /// Gets or sets the spatial factor.
+        /// </summary>  
         public double? SpatialFactor { get; set; }
 
         /// <summary>
-        ///     Gets or sets the spatial power.
-        /// </summary>
+        /// Gets or sets the spatial power.
+        /// </summary>  
         public double? SpatialPower { get; set; }
 
         /// <summary>
-        ///     Gets or sets the color factor.
-        /// </summary>
+        /// Gets or sets the color factor.
+        /// </summary>  
         public double? ColorFactor { get; set; }
 
         /// <summary>
-        ///     Gets or sets the color power.
-        /// </summary>
+        /// Gets or sets the color power.
+        /// </summary>  
         public double? ColorPower { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class BilateralSmoothingFilterProperties {\n");
-            sb.Append("  Size: ").Append(Size).Append("\n");
-            sb.Append("  SpatialFactor: ").Append(SpatialFactor).Append("\n");
-            sb.Append("  SpatialPower: ").Append(SpatialPower).Append("\n");
-            sb.Append("  ColorFactor: ").Append(ColorFactor).Append("\n");
-            sb.Append("  ColorPower: ").Append(ColorPower).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class BilateralSmoothingFilterProperties {\n");
+          sb.Append("  Size: ").Append(this.Size).Append("\n");
+          sb.Append("  SpatialFactor: ").Append(this.SpatialFactor).Append("\n");
+          sb.Append("  SpatialPower: ").Append(this.SpatialPower).Append("\n");
+          sb.Append("  ColorFactor: ").Append(this.ColorFactor).Append("\n");
+          sb.Append("  ColorPower: ").Append(this.ColorPower).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

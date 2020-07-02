@@ -23,73 +23,69 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.ModifyPsd" /> operation.
-    /// </summary>
-    public class ModifyPsdRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.ModifyPsd" /> operation.
+  /// </summary>  
+  public class ModifyPsdRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="ModifyPsdRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="ModifyPsdRequest"/> class.
+        /// </summary>        
         public ModifyPsdRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="ModifyPsdRequest" /> class.
+        /// Initializes a new instance of the <see cref="ModifyPsdRequest"/> class.
         /// </summary>
         /// <param name="name">Filename of image.</param>
         /// <param name="channelsCount">Count of color channels.</param>
         /// <param name="compressionMethod">Compression method (for now, raw and RLE are supported).</param>
-        /// <param name="fromScratch">
-        ///     Specifies where additional parameters we do not support should be taken from. If this is true
-        ///     – they will be taken from default values for standard image, if it is false – they will be saved from current
-        ///     image. Default is false.
-        /// </param>
+        /// <param name="fromScratch">Specifies where additional parameters we do not support should be taken from. If this is true – they will be taken from default values for standard image, if it is false – they will be saved from current image. Default is false.</param>
         /// <param name="folder">Folder with image to process.</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
-        public ModifyPsdRequest(string name, int? channelsCount = null, string compressionMethod = null,
-            bool? fromScratch = null, string folder = null, string storage = null)
+        public ModifyPsdRequest(string name, int? channelsCount = null, string compressionMethod = null, bool? fromScratch = null, string folder = null, string storage = null)             
         {
-            Name = name;
-            ChannelsCount = channelsCount;
-            CompressionMethod = compressionMethod;
-            FromScratch = fromScratch;
-            Folder = folder;
-            Storage = storage;
+            this.name = name;
+            this.channelsCount = channelsCount;
+            this.compressionMethod = compressionMethod;
+            this.fromScratch = fromScratch;
+            this.folder = folder;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Filename of image.
+        /// </summary>  
+        public string name { get; set; }
 
         /// <summary>
-        ///     Filename of image.
-        /// </summary>
-        public string Name { get; set; }
+        /// Count of color channels.
+        /// </summary>  
+        public int? channelsCount { get; set; }
 
         /// <summary>
-        ///     Count of color channels.
-        /// </summary>
-        public int? ChannelsCount { get; set; }
+        /// Compression method (for now, raw and RLE are supported).
+        /// </summary>  
+        public string compressionMethod { get; set; }
 
         /// <summary>
-        ///     Compression method (for now, raw and RLE are supported).
-        /// </summary>
-        public string CompressionMethod { get; set; }
+        /// Specifies where additional parameters we do not support should be taken from. If this is true – they will be taken from default values for standard image, if it is false – they will be saved from current image. Default is false.
+        /// </summary>  
+        public bool? fromScratch { get; set; }
 
         /// <summary>
-        ///     Specifies where additional parameters we do not support should be taken from. If this is true – they will be taken
-        ///     from default values for standard image, if it is false – they will be saved from current image. Default is false.
-        /// </summary>
-        public bool? FromScratch { get; set; }
+        /// Folder with image to process.
+        /// </summary>  
+        public string folder { get; set; }
 
         /// <summary>
-        ///     Folder with image to process.
-        /// </summary>
-        public string Folder { get; set; }
-
-        /// <summary>
-        ///     Your Aspose Cloud Storage name.
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Your Aspose Cloud Storage name.
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

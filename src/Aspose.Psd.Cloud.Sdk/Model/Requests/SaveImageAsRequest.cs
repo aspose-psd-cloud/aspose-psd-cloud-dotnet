@@ -23,59 +23,55 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.SaveImageAs" /> operation.
-    /// </summary>
-    public class SaveImageAsRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.SaveImageAs" /> operation.
+  /// </summary>  
+  public class SaveImageAsRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="SaveImageAsRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="SaveImageAsRequest"/> class.
+        /// </summary>        
         public SaveImageAsRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="SaveImageAsRequest" /> class.
+        /// Initializes a new instance of the <see cref="SaveImageAsRequest"/> class.
         /// </summary>
         /// <param name="name">Filename of image.</param>
-        /// <param name="format">
-        ///     Resulting image format. Please, refer to
-        ///     https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap
-        ///     for possible use-cases.
-        /// </param>
+        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
         /// <param name="folder">Folder with image to process.</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
-        public SaveImageAsRequest(string name, string format, string folder = null, string storage = null)
+        public SaveImageAsRequest(string name, string format, string folder = null, string storage = null)             
         {
-            Name = name;
-            Format = format;
-            Folder = folder;
-            Storage = storage;
+            this.name = name;
+            this.format = format;
+            this.folder = folder;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Filename of image.
+        /// </summary>  
+        public string name { get; set; }
 
         /// <summary>
-        ///     Filename of image.
-        /// </summary>
-        public string Name { get; set; }
+        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
+        /// </summary>  
+        public string format { get; set; }
 
         /// <summary>
-        ///     Resulting image format. Please, refer to
-        ///     https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap
-        ///     for possible use-cases.
-        /// </summary>
-        public string Format { get; set; }
+        /// Folder with image to process.
+        /// </summary>  
+        public string folder { get; set; }
 
         /// <summary>
-        ///     Folder with image to process.
-        /// </summary>
-        public string Folder { get; set; }
-
-        /// <summary>
-        ///     Your Aspose Cloud Storage name.
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Your Aspose Cloud Storage name.
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

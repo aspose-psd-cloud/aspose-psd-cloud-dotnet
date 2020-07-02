@@ -23,63 +23,62 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateDeskewedImage" /> operation.
-    /// </summary>
-    public class CreateDeskewedImageRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateDeskewedImage" /> operation.
+  /// </summary>  
+  public class CreateDeskewedImageRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateDeskewedImageRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="CreateDeskewedImageRequest"/> class.
+        /// </summary>        
         public CreateDeskewedImageRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateDeskewedImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateDeskewedImageRequest"/> class.
         /// </summary>
         /// <param name="imageData">Input image</param>
         /// <param name="resizeProportionally">Resize proportionally</param>
         /// <param name="bkColor">Background color</param>
         /// <param name="outPath">Path to updated file (if this is empty, response contains streamed image)</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
-        public CreateDeskewedImageRequest(Stream imageData, bool? resizeProportionally, string bkColor = null,
-            string outPath = null, string storage = null)
+        public CreateDeskewedImageRequest(System.IO.Stream imageData, bool? resizeProportionally, string bkColor = null, string outPath = null, string storage = null)             
         {
-            ImageData = imageData;
-            ResizeProportionally = resizeProportionally;
-            BkColor = bkColor;
-            OutPath = outPath;
-            Storage = storage;
+            this.imageData = imageData;
+            this.resizeProportionally = resizeProportionally;
+            this.bkColor = bkColor;
+            this.outPath = outPath;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Input image
+        /// </summary>  
+        public System.IO.Stream imageData { get; set; }
 
         /// <summary>
-        ///     Input image
-        /// </summary>
-        public Stream ImageData { get; set; }
+        /// Resize proportionally
+        /// </summary>  
+        public bool? resizeProportionally { get; set; }
 
         /// <summary>
-        ///     Resize proportionally
-        /// </summary>
-        public bool? ResizeProportionally { get; set; }
+        /// Background color
+        /// </summary>  
+        public string bkColor { get; set; }
 
         /// <summary>
-        ///     Background color
-        /// </summary>
-        public string BkColor { get; set; }
+        /// Path to updated file (if this is empty, response contains streamed image)
+        /// </summary>  
+        public string outPath { get; set; }
 
         /// <summary>
-        ///     Path to updated file (if this is empty, response contains streamed image)
-        /// </summary>
-        public string OutPath { get; set; }
-
-        /// <summary>
-        ///     Your Aspose Cloud Storage name.
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Your Aspose Cloud Storage name.
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

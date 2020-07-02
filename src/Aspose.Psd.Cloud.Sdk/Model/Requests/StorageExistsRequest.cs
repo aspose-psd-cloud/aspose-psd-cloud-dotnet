@@ -23,32 +23,34 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.StorageExists" /> operation.
-    /// </summary>
-    public class StorageExistsRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.StorageExists" /> operation.
+  /// </summary>  
+  public class StorageExistsRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="StorageExistsRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="StorageExistsRequest"/> class.
+        /// </summary>        
         public StorageExistsRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="StorageExistsRequest" /> class.
+        /// Initializes a new instance of the <see cref="StorageExistsRequest"/> class.
         /// </summary>
         /// <param name="storageName">Storage name</param>
-        public StorageExistsRequest(string storageName)
+        public StorageExistsRequest(string storageName)             
         {
-            StorageName = storageName;
+            this.storageName = storageName;
         }
-
+        
         /// <summary>
-        ///     Storage name
-        /// </summary>
-        public string StorageName { get; set; }
-    }
+        /// Storage name
+        /// </summary>  
+        public string storageName { get; set; }
+  }
 }

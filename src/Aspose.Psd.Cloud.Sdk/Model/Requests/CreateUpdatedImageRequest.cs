@@ -23,24 +23,24 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateUpdatedImage" /> operation.
-    /// </summary>
-    public class CreateUpdatedImageRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateUpdatedImage" /> operation.
+  /// </summary>  
+  public class CreateUpdatedImageRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateUpdatedImageRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="CreateUpdatedImageRequest"/> class.
+        /// </summary>        
         public CreateUpdatedImageRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateUpdatedImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateUpdatedImageRequest"/> class.
         /// </summary>
         /// <param name="imageData">Input image</param>
         /// <param name="newWidth">New width of the scaled image.</param>
@@ -49,93 +49,78 @@ namespace Aspose.Psd.Cloud.Sdk.Model.Requests
         /// <param name="y">Y position of start point for cropping rectangle.</param>
         /// <param name="rectWidth">Width of cropping rectangle.</param>
         /// <param name="rectHeight">Height of cropping rectangle.</param>
-        /// <param name="rotateFlipMethod">
-        ///     RotateFlip method (Rotate180FlipNone, Rotate180FlipX, Rotate180FlipXY, Rotate180FlipY,
-        ///     Rotate270FlipNone, Rotate270FlipX, Rotate270FlipXY, Rotate270FlipY, Rotate90FlipNone, Rotate90FlipX,
-        ///     Rotate90FlipXY, Rotate90FlipY, RotateNoneFlipNone, RotateNoneFlipX, RotateNoneFlipXY, RotateNoneFlipY). Default is
-        ///     RotateNoneFlipNone.
-        /// </param>
-        /// <param name="format">
-        ///     Resulting image format. Please, refer to
-        ///     https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap
-        ///     for possible use-cases.
-        /// </param>
+        /// <param name="rotateFlipMethod">RotateFlip method (Rotate180FlipNone, Rotate180FlipX, Rotate180FlipXY, Rotate180FlipY, Rotate270FlipNone, Rotate270FlipX, Rotate270FlipXY, Rotate270FlipY, Rotate90FlipNone, Rotate90FlipX, Rotate90FlipXY, Rotate90FlipY, RotateNoneFlipNone, RotateNoneFlipX, RotateNoneFlipXY, RotateNoneFlipY). Default is RotateNoneFlipNone.</param>
+        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
         /// <param name="outPath">Path to updated file (if this is empty, response contains streamed image).</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
-        public CreateUpdatedImageRequest(Stream imageData, int? newWidth, int? newHeight, int? x, int? y,
-            int? rectWidth, int? rectHeight, string rotateFlipMethod, string format = null, string outPath = null,
-            string storage = null)
+        public CreateUpdatedImageRequest(System.IO.Stream imageData, int? newWidth, int? newHeight, int? x, int? y, int? rectWidth, int? rectHeight, string rotateFlipMethod, string format = null, string outPath = null, string storage = null)             
         {
-            ImageData = imageData;
-            NewWidth = newWidth;
-            NewHeight = newHeight;
-            X = x;
-            Y = y;
-            RectWidth = rectWidth;
-            RectHeight = rectHeight;
-            RotateFlipMethod = rotateFlipMethod;
-            Format = format;
-            OutPath = outPath;
-            Storage = storage;
+            this.imageData = imageData;
+            this.newWidth = newWidth;
+            this.newHeight = newHeight;
+            this.x = x;
+            this.y = y;
+            this.rectWidth = rectWidth;
+            this.rectHeight = rectHeight;
+            this.rotateFlipMethod = rotateFlipMethod;
+            this.format = format;
+            this.outPath = outPath;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Input image
+        /// </summary>  
+        public System.IO.Stream imageData { get; set; }
 
         /// <summary>
-        ///     Input image
-        /// </summary>
-        public Stream ImageData { get; set; }
+        /// New width of the scaled image.
+        /// </summary>  
+        public int? newWidth { get; set; }
 
         /// <summary>
-        ///     New width of the scaled image.
-        /// </summary>
-        public int? NewWidth { get; set; }
+        /// New height of the scaled image.
+        /// </summary>  
+        public int? newHeight { get; set; }
 
         /// <summary>
-        ///     New height of the scaled image.
-        /// </summary>
-        public int? NewHeight { get; set; }
+        /// X position of start point for cropping rectangle.
+        /// </summary>  
+        public int? x { get; set; }
 
         /// <summary>
-        ///     X position of start point for cropping rectangle.
-        /// </summary>
-        public int? X { get; set; }
+        /// Y position of start point for cropping rectangle.
+        /// </summary>  
+        public int? y { get; set; }
 
         /// <summary>
-        ///     Y position of start point for cropping rectangle.
-        /// </summary>
-        public int? Y { get; set; }
+        /// Width of cropping rectangle.
+        /// </summary>  
+        public int? rectWidth { get; set; }
 
         /// <summary>
-        ///     Width of cropping rectangle.
-        /// </summary>
-        public int? RectWidth { get; set; }
+        /// Height of cropping rectangle.
+        /// </summary>  
+        public int? rectHeight { get; set; }
 
         /// <summary>
-        ///     Height of cropping rectangle.
-        /// </summary>
-        public int? RectHeight { get; set; }
+        /// RotateFlip method (Rotate180FlipNone, Rotate180FlipX, Rotate180FlipXY, Rotate180FlipY, Rotate270FlipNone, Rotate270FlipX, Rotate270FlipXY, Rotate270FlipY, Rotate90FlipNone, Rotate90FlipX, Rotate90FlipXY, Rotate90FlipY, RotateNoneFlipNone, RotateNoneFlipX, RotateNoneFlipXY, RotateNoneFlipY). Default is RotateNoneFlipNone.
+        /// </summary>  
+        public string rotateFlipMethod { get; set; }
 
         /// <summary>
-        ///     RotateFlip method (Rotate180FlipNone, Rotate180FlipX, Rotate180FlipXY, Rotate180FlipY, Rotate270FlipNone,
-        ///     Rotate270FlipX, Rotate270FlipXY, Rotate270FlipY, Rotate90FlipNone, Rotate90FlipX, Rotate90FlipXY, Rotate90FlipY,
-        ///     RotateNoneFlipNone, RotateNoneFlipX, RotateNoneFlipXY, RotateNoneFlipY). Default is RotateNoneFlipNone.
-        /// </summary>
-        public string RotateFlipMethod { get; set; }
+        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
+        /// </summary>  
+        public string format { get; set; }
 
         /// <summary>
-        ///     Resulting image format. Please, refer to
-        ///     https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap
-        ///     for possible use-cases.
-        /// </summary>
-        public string Format { get; set; }
+        /// Path to updated file (if this is empty, response contains streamed image).
+        /// </summary>  
+        public string outPath { get; set; }
 
         /// <summary>
-        ///     Path to updated file (if this is empty, response contains streamed image).
-        /// </summary>
-        public string OutPath { get; set; }
-
-        /// <summary>
-        ///     Your Aspose Cloud Storage name.
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Your Aspose Cloud Storage name.
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

@@ -23,46 +23,48 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.ObjectExists" /> operation.
-    /// </summary>
-    public class ObjectExistsRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.ObjectExists" /> operation.
+  /// </summary>  
+  public class ObjectExistsRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="ObjectExistsRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="ObjectExistsRequest"/> class.
+        /// </summary>        
         public ObjectExistsRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="ObjectExistsRequest" /> class.
+        /// Initializes a new instance of the <see cref="ObjectExistsRequest"/> class.
         /// </summary>
         /// <param name="path">File or folder path e.g. &#39;/file.ext&#39; or &#39;/folder&#39;</param>
         /// <param name="storageName">Storage name</param>
         /// <param name="versionId">File version ID</param>
-        public ObjectExistsRequest(string path, string storageName = null, string versionId = null)
+        public ObjectExistsRequest(string path, string storageName = null, string versionId = null)             
         {
-            Path = path;
-            StorageName = storageName;
-            VersionId = versionId;
+            this.path = path;
+            this.storageName = storageName;
+            this.versionId = versionId;
         }
+        
+        /// <summary>
+        /// File or folder path e.g. '/file.ext' or '/folder'
+        /// </summary>  
+        public string path { get; set; }
 
         /// <summary>
-        ///     File or folder path e.g. '/file.ext' or '/folder'
-        /// </summary>
-        public string Path { get; set; }
+        /// Storage name
+        /// </summary>  
+        public string storageName { get; set; }
 
         /// <summary>
-        ///     Storage name
-        /// </summary>
-        public string StorageName { get; set; }
-
-        /// <summary>
-        ///     File version ID
-        /// </summary>
-        public string VersionId { get; set; }
-    }
+        /// File version ID
+        /// </summary>  
+        public string versionId { get; set; }
+  }
 }

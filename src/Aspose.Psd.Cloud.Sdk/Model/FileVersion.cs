@@ -23,37 +23,43 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     File Version
-    /// </summary>
-    public class FileVersion : StorageFile
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// File Version
+  /// </summary>  
+  public class FileVersion : StorageFile 
+  {                       
         /// <summary>
-        ///     File Version ID.
-        /// </summary>
+        /// File Version ID.
+        /// </summary>  
         public string VersionId { get; set; }
 
         /// <summary>
-        ///     Specifies whether the file is (true) or is not (false) the latest version of an file.
-        /// </summary>
+        /// Specifies whether the file is (true) or is not (false) the latest version of an file.
+        /// </summary>  
         public bool? IsLatest { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class FileVersion {\n");
-            sb.Append("  VersionId: ").Append(VersionId).Append("\n");
-            sb.Append("  IsLatest: ").Append(IsLatest).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class FileVersion {\n");
+          sb.Append("  VersionId: ").Append(this.VersionId).Append("\n");
+          sb.Append("  IsLatest: ").Append(this.IsLatest).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

@@ -23,25 +23,31 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     Big Rectangular Filter Options
-    /// </summary>
-    public class BigRectangularFilterProperties : FilterPropertiesBase
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// Big Rectangular Filter Options
+  /// </summary>  
+  public class BigRectangularFilterProperties : FilterPropertiesBase 
+  {                       
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class BigRectangularFilterProperties {\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class BigRectangularFilterProperties {\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

@@ -23,90 +23,83 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateCroppedImage" /> operation.
-    /// </summary>
-    public class CreateCroppedImageRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateCroppedImage" /> operation.
+  /// </summary>  
+  public class CreateCroppedImageRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateCroppedImageRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="CreateCroppedImageRequest"/> class.
+        /// </summary>        
         public CreateCroppedImageRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateCroppedImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateCroppedImageRequest"/> class.
         /// </summary>
         /// <param name="imageData">Input image</param>
         /// <param name="x">X position of start point for cropping rectangle.</param>
         /// <param name="y">Y position of start point for cropping rectangle.</param>
         /// <param name="width">Width of cropping rectangle.</param>
         /// <param name="height">Height of cropping rectangle.</param>
-        /// <param name="format">
-        ///     Resulting image format. Please, refer to
-        ///     https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap
-        ///     for possible use-cases.
-        /// </param>
+        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
         /// <param name="outPath">Path to updated file (if this is empty, response contains streamed image).</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
-        public CreateCroppedImageRequest(Stream imageData, int? x, int? y, int? width, int? height,
-            string format = null, string outPath = null, string storage = null)
+        public CreateCroppedImageRequest(System.IO.Stream imageData, int? x, int? y, int? width, int? height, string format = null, string outPath = null, string storage = null)             
         {
-            ImageData = imageData;
-            X = x;
-            Y = y;
-            Width = width;
-            Height = height;
-            Format = format;
-            OutPath = outPath;
-            Storage = storage;
+            this.imageData = imageData;
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.format = format;
+            this.outPath = outPath;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Input image
+        /// </summary>  
+        public System.IO.Stream imageData { get; set; }
 
         /// <summary>
-        ///     Input image
-        /// </summary>
-        public Stream ImageData { get; set; }
+        /// X position of start point for cropping rectangle.
+        /// </summary>  
+        public int? x { get; set; }
 
         /// <summary>
-        ///     X position of start point for cropping rectangle.
-        /// </summary>
-        public int? X { get; set; }
+        /// Y position of start point for cropping rectangle.
+        /// </summary>  
+        public int? y { get; set; }
 
         /// <summary>
-        ///     Y position of start point for cropping rectangle.
-        /// </summary>
-        public int? Y { get; set; }
+        /// Width of cropping rectangle.
+        /// </summary>  
+        public int? width { get; set; }
 
         /// <summary>
-        ///     Width of cropping rectangle.
-        /// </summary>
-        public int? Width { get; set; }
+        /// Height of cropping rectangle.
+        /// </summary>  
+        public int? height { get; set; }
 
         /// <summary>
-        ///     Height of cropping rectangle.
-        /// </summary>
-        public int? Height { get; set; }
+        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
+        /// </summary>  
+        public string format { get; set; }
 
         /// <summary>
-        ///     Resulting image format. Please, refer to
-        ///     https://docs.aspose.cloud/display/imagingcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap
-        ///     for possible use-cases.
-        /// </summary>
-        public string Format { get; set; }
+        /// Path to updated file (if this is empty, response contains streamed image).
+        /// </summary>  
+        public string outPath { get; set; }
 
         /// <summary>
-        ///     Path to updated file (if this is empty, response contains streamed image).
-        /// </summary>
-        public string OutPath { get; set; }
-
-        /// <summary>
-        ///     Your Aspose Cloud Storage name.
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Your Aspose Cloud Storage name.
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

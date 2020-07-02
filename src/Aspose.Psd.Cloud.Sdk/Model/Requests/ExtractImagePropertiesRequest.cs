@@ -23,34 +23,34 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.ExtractImageProperties" /> operation.
-    /// </summary>
-    public class ExtractImagePropertiesRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.ExtractImageProperties" /> operation.
+  /// </summary>  
+  public class ExtractImagePropertiesRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="ExtractImagePropertiesRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="ExtractImagePropertiesRequest"/> class.
+        /// </summary>        
         public ExtractImagePropertiesRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="ExtractImagePropertiesRequest" /> class.
+        /// Initializes a new instance of the <see cref="ExtractImagePropertiesRequest"/> class.
         /// </summary>
         /// <param name="imageData">Input image</param>
-        public ExtractImagePropertiesRequest(Stream imageData)
+        public ExtractImagePropertiesRequest(System.IO.Stream imageData)             
         {
-            ImageData = imageData;
+            this.imageData = imageData;
         }
-
+        
         /// <summary>
-        ///     Input image
-        /// </summary>
-        public Stream ImageData { get; set; }
-    }
+        /// Input image
+        /// </summary>  
+        public System.IO.Stream imageData { get; set; }
+  }
 }

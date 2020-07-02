@@ -23,48 +23,48 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateGrayscaledImage" /> operation.
-    /// </summary>
-    public class CreateGrayscaledImageRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateGrayscaledImage" /> operation.
+  /// </summary>  
+  public class CreateGrayscaledImageRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateGrayscaledImageRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="CreateGrayscaledImageRequest"/> class.
+        /// </summary>        
         public CreateGrayscaledImageRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateGrayscaledImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateGrayscaledImageRequest"/> class.
         /// </summary>
         /// <param name="imageData">Input image</param>
         /// <param name="outPath">Path to updated file (if this is empty, response contains streamed image)</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
-        public CreateGrayscaledImageRequest(Stream imageData, string outPath = null, string storage = null)
+        public CreateGrayscaledImageRequest(System.IO.Stream imageData, string outPath = null, string storage = null)             
         {
-            ImageData = imageData;
-            OutPath = outPath;
-            Storage = storage;
+            this.imageData = imageData;
+            this.outPath = outPath;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Input image
+        /// </summary>  
+        public System.IO.Stream imageData { get; set; }
 
         /// <summary>
-        ///     Input image
-        /// </summary>
-        public Stream ImageData { get; set; }
+        /// Path to updated file (if this is empty, response contains streamed image)
+        /// </summary>  
+        public string outPath { get; set; }
 
         /// <summary>
-        ///     Path to updated file (if this is empty, response contains streamed image)
-        /// </summary>
-        public string OutPath { get; set; }
-
-        /// <summary>
-        ///     Your Aspose Cloud Storage name.
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Your Aspose Cloud Storage name.
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

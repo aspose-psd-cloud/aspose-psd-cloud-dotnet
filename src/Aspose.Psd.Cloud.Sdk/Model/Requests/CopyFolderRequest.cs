@@ -23,54 +23,55 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CopyFolder" /> operation.
-    /// </summary>
-    public class CopyFolderRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CopyFolder" /> operation.
+  /// </summary>  
+  public class CopyFolderRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CopyFolderRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="CopyFolderRequest"/> class.
+        /// </summary>        
         public CopyFolderRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CopyFolderRequest" /> class.
+        /// Initializes a new instance of the <see cref="CopyFolderRequest"/> class.
         /// </summary>
         /// <param name="srcPath">Source folder path e.g. &#39;/src&#39;</param>
         /// <param name="destPath">Destination folder path e.g. &#39;/dst&#39;</param>
         /// <param name="srcStorageName">Source storage name</param>
         /// <param name="destStorageName">Destination storage name</param>
-        public CopyFolderRequest(string srcPath, string destPath, string srcStorageName = null,
-            string destStorageName = null)
+        public CopyFolderRequest(string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)             
         {
-            SrcPath = srcPath;
-            DestPath = destPath;
-            SrcStorageName = srcStorageName;
-            DestStorageName = destStorageName;
+            this.srcPath = srcPath;
+            this.destPath = destPath;
+            this.srcStorageName = srcStorageName;
+            this.destStorageName = destStorageName;
         }
+        
+        /// <summary>
+        /// Source folder path e.g. '/src'
+        /// </summary>  
+        public string srcPath { get; set; }
 
         /// <summary>
-        ///     Source folder path e.g. '/src'
-        /// </summary>
-        public string SrcPath { get; set; }
+        /// Destination folder path e.g. '/dst'
+        /// </summary>  
+        public string destPath { get; set; }
 
         /// <summary>
-        ///     Destination folder path e.g. '/dst'
-        /// </summary>
-        public string DestPath { get; set; }
+        /// Source storage name
+        /// </summary>  
+        public string srcStorageName { get; set; }
 
         /// <summary>
-        ///     Source storage name
-        /// </summary>
-        public string SrcStorageName { get; set; }
-
-        /// <summary>
-        ///     Destination storage name
-        /// </summary>
-        public string DestStorageName { get; set; }
-    }
+        /// Destination storage name
+        /// </summary>  
+        public string destStorageName { get; set; }
+  }
 }

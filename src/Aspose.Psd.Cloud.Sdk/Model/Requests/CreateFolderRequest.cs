@@ -23,39 +23,41 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateFolder" /> operation.
-    /// </summary>
-    public class CreateFolderRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.CreateFolder" /> operation.
+  /// </summary>  
+  public class CreateFolderRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateFolderRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="CreateFolderRequest"/> class.
+        /// </summary>        
         public CreateFolderRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="CreateFolderRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateFolderRequest"/> class.
         /// </summary>
         /// <param name="path">Folder path to create e.g. &#39;folder_1/folder_2/&#39;</param>
         /// <param name="storageName">Storage name</param>
-        public CreateFolderRequest(string path, string storageName = null)
+        public CreateFolderRequest(string path, string storageName = null)             
         {
-            Path = path;
-            StorageName = storageName;
+            this.path = path;
+            this.storageName = storageName;
         }
+        
+        /// <summary>
+        /// Folder path to create e.g. 'folder_1/folder_2/'
+        /// </summary>  
+        public string path { get; set; }
 
         /// <summary>
-        ///     Folder path to create e.g. 'folder_1/folder_2/'
-        /// </summary>
-        public string Path { get; set; }
-
-        /// <summary>
-        ///     Storage name
-        /// </summary>
-        public string StorageName { get; set; }
-    }
+        /// Storage name
+        /// </summary>  
+        public string storageName { get; set; }
+  }
 }

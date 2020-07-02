@@ -23,31 +23,37 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     Filter Options Base, abstract class
-    /// </summary>
-    public class FilterPropertiesBase
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// Filter Options Base, abstract class
+  /// </summary>  
+  public class FilterPropertiesBase 
+  {                       
         /// <summary>
-        ///     Gets or sets Discriminator
-        /// </summary>
+        /// Gets or sets Discriminator
+        /// </summary>  
         public string Discriminator { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class FilterPropertiesBase {\n");
-            sb.Append("  Discriminator: ").Append(Discriminator).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class FilterPropertiesBase {\n");
+          sb.Append("  Discriminator: ").Append(this.Discriminator).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

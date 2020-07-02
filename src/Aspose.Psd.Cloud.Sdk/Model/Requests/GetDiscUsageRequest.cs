@@ -23,32 +23,34 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.GetDiscUsage" /> operation.
-    /// </summary>
-    public class GetDiscUsageRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.GetDiscUsage" /> operation.
+  /// </summary>  
+  public class GetDiscUsageRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="GetDiscUsageRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="GetDiscUsageRequest"/> class.
+        /// </summary>        
         public GetDiscUsageRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="GetDiscUsageRequest" /> class.
+        /// Initializes a new instance of the <see cref="GetDiscUsageRequest"/> class.
         /// </summary>
         /// <param name="storageName">Storage name</param>
-        public GetDiscUsageRequest(string storageName = null)
+        public GetDiscUsageRequest(string storageName = null)             
         {
-            StorageName = storageName;
+            this.storageName = storageName;
         }
-
+        
         /// <summary>
-        ///     Storage name
-        /// </summary>
-        public string StorageName { get; set; }
-    }
+        /// Storage name
+        /// </summary>  
+        public string storageName { get; set; }
+  }
 }

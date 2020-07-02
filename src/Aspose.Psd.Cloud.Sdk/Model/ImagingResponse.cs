@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="PsdResponse.cs">
+// <copyright company="Aspose" file="ImagingResponse.cs">
 //   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 // </copyright>
 // <summary>
@@ -23,67 +23,73 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     Represents information about image.
-    /// </summary>
-    public class PsdResponse
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// Represents information about image.
+  /// </summary>  
+  public class ImagingResponse 
+  {                       
         /// <summary>
-        ///     Gets or sets the height of image.
-        /// </summary>
+        /// Gets or sets the height of image.
+        /// </summary>  
         public int? Height { get; set; }
 
         /// <summary>
-        ///     Gets or sets the width of image.
-        /// </summary>
+        /// Gets or sets the width of image.
+        /// </summary>  
         public int? Width { get; set; }
 
         /// <summary>
-        ///     Gets or sets the bits per pixel for image.
-        /// </summary>
+        /// Gets or sets the bits per pixel for image.
+        /// </summary>  
         public int? BitsPerPixel { get; set; }
 
         /// <summary>
-        ///     Gets or sets the PSD properties.
-        /// </summary>
+        /// Gets or sets the PSD properties.
+        /// </summary>  
         public PsdProperties PsdProperties { get; set; }
 
         /// <summary>
-        ///     Gets or sets the horizontal resolution of an image.
-        /// </summary>
+        /// Gets or sets the horizontal resolution of an image.
+        /// </summary>  
         public double? HorizontalResolution { get; set; }
 
         /// <summary>
-        ///     Gets or sets the vertical resolution of an image.
-        /// </summary>
+        /// Gets or sets the vertical resolution of an image.
+        /// </summary>  
         public double? VerticalResolution { get; set; }
 
         /// <summary>
-        ///     Gets or sets a value indicating whether image is cached.
-        /// </summary>
+        /// Gets or sets a value indicating whether image is cached.
+        /// </summary>  
         public bool? IsCached { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class PsdResponse {\n");
-            sb.Append("  Height: ").Append(Height).Append("\n");
-            sb.Append("  Width: ").Append(Width).Append("\n");
-            sb.Append("  BitsPerPixel: ").Append(BitsPerPixel).Append("\n");
-            sb.Append("  PsdProperties: ").Append(PsdProperties).Append("\n");
-            sb.Append("  HorizontalResolution: ").Append(HorizontalResolution).Append("\n");
-            sb.Append("  VerticalResolution: ").Append(VerticalResolution).Append("\n");
-            sb.Append("  IsCached: ").Append(IsCached).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class ImagingResponse {\n");
+          sb.Append("  Height: ").Append(this.Height).Append("\n");
+          sb.Append("  Width: ").Append(this.Width).Append("\n");
+          sb.Append("  BitsPerPixel: ").Append(this.BitsPerPixel).Append("\n");
+          sb.Append("  PsdProperties: ").Append(this.PsdProperties).Append("\n");
+          sb.Append("  HorizontalResolution: ").Append(this.HorizontalResolution).Append("\n");
+          sb.Append("  VerticalResolution: ").Append(this.VerticalResolution).Append("\n");
+          sb.Append("  IsCached: ").Append(this.IsCached).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

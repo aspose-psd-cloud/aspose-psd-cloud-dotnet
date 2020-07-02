@@ -23,37 +23,43 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     Class for disc space information.
-    /// </summary>
-    public class DiscUsage
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// Class for disc space information.
+  /// </summary>  
+  public class DiscUsage 
+  {                       
         /// <summary>
-        ///     Application used disc space.
-        /// </summary>
+        /// Application used disc space.
+        /// </summary>  
         public long? UsedSize { get; set; }
 
         /// <summary>
-        ///     Total disc space.
-        /// </summary>
+        /// Total disc space.
+        /// </summary>  
         public long? TotalSize { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class DiscUsage {\n");
-            sb.Append("  UsedSize: ").Append(UsedSize).Append("\n");
-            sb.Append("  TotalSize: ").Append(TotalSize).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class DiscUsage {\n");
+          sb.Append("  UsedSize: ").Append(this.UsedSize).Append("\n");
+          sb.Append("  TotalSize: ").Append(this.TotalSize).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

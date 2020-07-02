@@ -23,50 +23,55 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     Deconvolution Filter Options, abstract class
-    /// </summary>
-    public class DeconvolutionFilterProperties : FilterPropertiesBase
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// Deconvolution Filter Options, abstract class
+  /// </summary>  
+  public class DeconvolutionFilterProperties : FilterPropertiesBase 
+  {                       
         /// <summary>
-        ///     Gets or sets the SNR(signal-to-noise ratio) recommended range 0.002 - 0.009, default value = 0.007
-        /// </summary>
+        /// Gets or sets the SNR(signal-to-noise ratio) recommended range 0.002 - 0.009, default value = 0.007
+        /// </summary>  
         public double? Snr { get; set; }
 
         /// <summary>
-        ///     Gets or sets the brightness. recommended range 1 - 1.5 default value = 1.15
-        /// </summary>
+        /// Gets or sets the brightness. recommended range 1 - 1.5 default value = 1.15
+        /// </summary>  
         public double? Brightness { get; set; }
 
         /// <summary>
-        ///     Gets or sets a value indicating whether this DeconvolutionFilterProperties is grayscale. Return grayscale mode or
-        ///     RGB mode.
-        /// </summary>
+        /// Gets or sets a value indicating whether this DeconvolutionFilterProperties is grayscale. Return grayscale mode or RGB mode.
+        /// </summary>  
         public bool? Grayscale { get; set; }
 
         /// <summary>
-        ///     Gets a value indicating whether this instance is partial loaded.
-        /// </summary>
+        /// Gets a value indicating whether this instance is partial loaded.
+        /// </summary>  
         public bool? IsPartialLoaded { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class DeconvolutionFilterProperties {\n");
-            sb.Append("  Snr: ").Append(Snr).Append("\n");
-            sb.Append("  Brightness: ").Append(Brightness).Append("\n");
-            sb.Append("  Grayscale: ").Append(Grayscale).Append("\n");
-            sb.Append("  IsPartialLoaded: ").Append(IsPartialLoaded).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class DeconvolutionFilterProperties {\n");
+          sb.Append("  Snr: ").Append(this.Snr).Append("\n");
+          sb.Append("  Brightness: ").Append(this.Brightness).Append("\n");
+          sb.Append("  Grayscale: ").Append(this.Grayscale).Append("\n");
+          sb.Append("  IsPartialLoaded: ").Append(this.IsPartialLoaded).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

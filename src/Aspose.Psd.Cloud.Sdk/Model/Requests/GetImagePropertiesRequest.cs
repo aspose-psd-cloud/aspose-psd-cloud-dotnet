@@ -23,46 +23,48 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.GetImageProperties" /> operation.
-    /// </summary>
-    public class GetImagePropertiesRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.GetImageProperties" /> operation.
+  /// </summary>  
+  public class GetImagePropertiesRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="GetImagePropertiesRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="GetImagePropertiesRequest"/> class.
+        /// </summary>        
         public GetImagePropertiesRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="GetImagePropertiesRequest" /> class.
+        /// Initializes a new instance of the <see cref="GetImagePropertiesRequest"/> class.
         /// </summary>
         /// <param name="name">Filename of an image.</param>
         /// <param name="folder">Folder with image to process.</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
-        public GetImagePropertiesRequest(string name, string folder = null, string storage = null)
+        public GetImagePropertiesRequest(string name, string folder = null, string storage = null)             
         {
-            Name = name;
-            Folder = folder;
-            Storage = storage;
+            this.name = name;
+            this.folder = folder;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Filename of an image.
+        /// </summary>  
+        public string name { get; set; }
 
         /// <summary>
-        ///     Filename of an image.
-        /// </summary>
-        public string Name { get; set; }
+        /// Folder with image to process.
+        /// </summary>  
+        public string folder { get; set; }
 
         /// <summary>
-        ///     Folder with image to process.
-        /// </summary>
-        public string Folder { get; set; }
-
-        /// <summary>
-        ///     Your Aspose Cloud Storage name.
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Your Aspose Cloud Storage name.
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

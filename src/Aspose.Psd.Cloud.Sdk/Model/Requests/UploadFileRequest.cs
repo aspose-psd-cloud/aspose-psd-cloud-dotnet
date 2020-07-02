@@ -23,54 +23,49 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.UploadFile" /> operation.
-    /// </summary>
-    public class UploadFileRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.UploadFile" /> operation.
+  /// </summary>  
+  public class UploadFileRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="UploadFileRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="UploadFileRequest"/> class.
+        /// </summary>        
         public UploadFileRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="UploadFileRequest" /> class.
+        /// Initializes a new instance of the <see cref="UploadFileRequest"/> class.
         /// </summary>
-        /// <param name="path">
-        ///     Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext
-        ///     If the content is multipart and path does not contains the file name it tries to get them from filename parameter
-        ///     from Content-Disposition header.
-        /// </param>
+        /// <param name="path">Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             </param>
         /// <param name="file">File to upload</param>
         /// <param name="storageName">Storage name</param>
-        public UploadFileRequest(string path, Stream file, string storageName = null)
+        public UploadFileRequest(string path, System.IO.Stream file, string storageName = null)             
         {
-            Path = path;
-            File = file;
-            StorageName = storageName;
+            this.path = path;
+            this.File = file;
+            this.storageName = storageName;
         }
+        
+        /// <summary>
+        /// Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the content is multipart and path does not contains the file name it tries to get them from filename parameter             from Content-Disposition header.             
+        /// </summary>  
+        public string path { get; set; }
 
         /// <summary>
-        ///     Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext             If the
-        ///     content is multipart and path does not contains the file name it tries to get them from filename parameter
-        ///     from Content-Disposition header.
-        /// </summary>
-        public string Path { get; set; }
+        /// File to upload
+        /// </summary>  
+        public System.IO.Stream File { get; set; }
 
         /// <summary>
-        ///     File to upload
-        /// </summary>
-        public Stream File { get; set; }
-
-        /// <summary>
-        ///     Storage name
-        /// </summary>
-        public string StorageName { get; set; }
-    }
+        /// Storage name
+        /// </summary>  
+        public string storageName { get; set; }
+  }
 }
+

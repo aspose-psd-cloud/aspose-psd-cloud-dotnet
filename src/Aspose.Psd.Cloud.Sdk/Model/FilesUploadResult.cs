@@ -23,38 +23,43 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     File upload result
-    /// </summary>
-    public class FilesUploadResult
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// File upload result
+  /// </summary>  
+  public class FilesUploadResult 
+  {                       
         /// <summary>
-        ///     List of uploaded file names
-        /// </summary>
+        /// List of uploaded file names
+        /// </summary>  
         public List<string> Uploaded { get; set; }
 
         /// <summary>
-        ///     List of errors.
-        /// </summary>
+        /// List of errors.
+        /// </summary>  
         public List<Error> Errors { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class FilesUploadResult {\n");
-            sb.Append("  Uploaded: ").Append(Uploaded).Append("\n");
-            sb.Append("  Errors: ").Append(Errors).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class FilesUploadResult {\n");
+          sb.Append("  Uploaded: ").Append(this.Uploaded).Append("\n");
+          sb.Append("  Errors: ").Append(this.Errors).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }

@@ -23,61 +23,62 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.DeskewImage" /> operation.
-    /// </summary>
-    public class DeskewImageRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.DeskewImage" /> operation.
+  /// </summary>  
+  public class DeskewImageRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="DeskewImageRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="DeskewImageRequest"/> class.
+        /// </summary>        
         public DeskewImageRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="DeskewImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="DeskewImageRequest"/> class.
         /// </summary>
         /// <param name="name">Image file name.</param>
         /// <param name="resizeProportionally">Resize proportionally</param>
         /// <param name="bkColor">Background color</param>
         /// <param name="folder">Folder</param>
         /// <param name="storage">Storage</param>
-        public DeskewImageRequest(string name, bool? resizeProportionally, string bkColor = null, string folder = null,
-            string storage = null)
+        public DeskewImageRequest(string name, bool? resizeProportionally, string bkColor = null, string folder = null, string storage = null)             
         {
-            Name = name;
-            ResizeProportionally = resizeProportionally;
-            BkColor = bkColor;
-            Folder = folder;
-            Storage = storage;
+            this.name = name;
+            this.resizeProportionally = resizeProportionally;
+            this.bkColor = bkColor;
+            this.folder = folder;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Image file name.
+        /// </summary>  
+        public string name { get; set; }
 
         /// <summary>
-        ///     Image file name.
-        /// </summary>
-        public string Name { get; set; }
+        /// Resize proportionally
+        /// </summary>  
+        public bool? resizeProportionally { get; set; }
 
         /// <summary>
-        ///     Resize proportionally
-        /// </summary>
-        public bool? ResizeProportionally { get; set; }
+        /// Background color
+        /// </summary>  
+        public string bkColor { get; set; }
 
         /// <summary>
-        ///     Background color
-        /// </summary>
-        public string BkColor { get; set; }
+        /// Folder
+        /// </summary>  
+        public string folder { get; set; }
 
         /// <summary>
-        ///     Folder
-        /// </summary>
-        public string Folder { get; set; }
-
-        /// <summary>
-        ///     Storage
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Storage
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

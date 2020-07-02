@@ -23,54 +23,55 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.MoveFolder" /> operation.
-    /// </summary>
-    public class MoveFolderRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.MoveFolder" /> operation.
+  /// </summary>  
+  public class MoveFolderRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="MoveFolderRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="MoveFolderRequest"/> class.
+        /// </summary>        
         public MoveFolderRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="MoveFolderRequest" /> class.
+        /// Initializes a new instance of the <see cref="MoveFolderRequest"/> class.
         /// </summary>
         /// <param name="srcPath">Folder path to move e.g. &#39;/folder&#39;</param>
         /// <param name="destPath">Destination folder path to move to e.g &#39;/dst&#39;</param>
         /// <param name="srcStorageName">Source storage name</param>
         /// <param name="destStorageName">Destination storage name</param>
-        public MoveFolderRequest(string srcPath, string destPath, string srcStorageName = null,
-            string destStorageName = null)
+        public MoveFolderRequest(string srcPath, string destPath, string srcStorageName = null, string destStorageName = null)             
         {
-            SrcPath = srcPath;
-            DestPath = destPath;
-            SrcStorageName = srcStorageName;
-            DestStorageName = destStorageName;
+            this.srcPath = srcPath;
+            this.destPath = destPath;
+            this.srcStorageName = srcStorageName;
+            this.destStorageName = destStorageName;
         }
+        
+        /// <summary>
+        /// Folder path to move e.g. '/folder'
+        /// </summary>  
+        public string srcPath { get; set; }
 
         /// <summary>
-        ///     Folder path to move e.g. '/folder'
-        /// </summary>
-        public string SrcPath { get; set; }
+        /// Destination folder path to move to e.g '/dst'
+        /// </summary>  
+        public string destPath { get; set; }
 
         /// <summary>
-        ///     Destination folder path to move to e.g '/dst'
-        /// </summary>
-        public string DestPath { get; set; }
+        /// Source storage name
+        /// </summary>  
+        public string srcStorageName { get; set; }
 
         /// <summary>
-        ///     Source storage name
-        /// </summary>
-        public string SrcStorageName { get; set; }
-
-        /// <summary>
-        ///     Destination storage name
-        /// </summary>
-        public string DestStorageName { get; set; }
-    }
+        /// Destination storage name
+        /// </summary>  
+        public string destStorageName { get; set; }
+  }
 }

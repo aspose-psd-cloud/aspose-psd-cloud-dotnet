@@ -23,46 +23,48 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.GrayscaleImage" /> operation.
-    /// </summary>
-    public class GrayscaleImageRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.GrayscaleImage" /> operation.
+  /// </summary>  
+  public class GrayscaleImageRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="GrayscaleImageRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="GrayscaleImageRequest"/> class.
+        /// </summary>        
         public GrayscaleImageRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="GrayscaleImageRequest" /> class.
+        /// Initializes a new instance of the <see cref="GrayscaleImageRequest"/> class.
         /// </summary>
         /// <param name="name">Image file name.</param>
         /// <param name="folder">Folder</param>
         /// <param name="storage">Storage</param>
-        public GrayscaleImageRequest(string name, string folder = null, string storage = null)
+        public GrayscaleImageRequest(string name, string folder = null, string storage = null)             
         {
-            Name = name;
-            Folder = folder;
-            Storage = storage;
+            this.name = name;
+            this.folder = folder;
+            this.storage = storage;
         }
+        
+        /// <summary>
+        /// Image file name.
+        /// </summary>  
+        public string name { get; set; }
 
         /// <summary>
-        ///     Image file name.
-        /// </summary>
-        public string Name { get; set; }
+        /// Folder
+        /// </summary>  
+        public string folder { get; set; }
 
         /// <summary>
-        ///     Folder
-        /// </summary>
-        public string Folder { get; set; }
-
-        /// <summary>
-        ///     Storage
-        /// </summary>
-        public string Storage { get; set; }
-    }
+        /// Storage
+        /// </summary>  
+        public string storage { get; set; }
+  }
 }

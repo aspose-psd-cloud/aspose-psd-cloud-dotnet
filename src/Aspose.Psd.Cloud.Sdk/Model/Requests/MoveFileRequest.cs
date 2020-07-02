@@ -23,61 +23,62 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.MoveFile" /> operation.
-    /// </summary>
-    public class MoveFileRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.MoveFile" /> operation.
+  /// </summary>  
+  public class MoveFileRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="MoveFileRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="MoveFileRequest"/> class.
+        /// </summary>        
         public MoveFileRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="MoveFileRequest" /> class.
+        /// Initializes a new instance of the <see cref="MoveFileRequest"/> class.
         /// </summary>
         /// <param name="srcPath">Source file path e.g. &#39;/src.ext&#39;</param>
         /// <param name="destPath">Destination file path e.g. &#39;/dest.ext&#39;</param>
         /// <param name="srcStorageName">Source storage name</param>
         /// <param name="destStorageName">Destination storage name</param>
         /// <param name="versionId">File version ID to move</param>
-        public MoveFileRequest(string srcPath, string destPath, string srcStorageName = null,
-            string destStorageName = null, string versionId = null)
+        public MoveFileRequest(string srcPath, string destPath, string srcStorageName = null, string destStorageName = null, string versionId = null)             
         {
-            SrcPath = srcPath;
-            DestPath = destPath;
-            SrcStorageName = srcStorageName;
-            DestStorageName = destStorageName;
-            VersionId = versionId;
+            this.srcPath = srcPath;
+            this.destPath = destPath;
+            this.srcStorageName = srcStorageName;
+            this.destStorageName = destStorageName;
+            this.versionId = versionId;
         }
+        
+        /// <summary>
+        /// Source file path e.g. '/src.ext'
+        /// </summary>  
+        public string srcPath { get; set; }
 
         /// <summary>
-        ///     Source file path e.g. '/src.ext'
-        /// </summary>
-        public string SrcPath { get; set; }
+        /// Destination file path e.g. '/dest.ext'
+        /// </summary>  
+        public string destPath { get; set; }
 
         /// <summary>
-        ///     Destination file path e.g. '/dest.ext'
-        /// </summary>
-        public string DestPath { get; set; }
+        /// Source storage name
+        /// </summary>  
+        public string srcStorageName { get; set; }
 
         /// <summary>
-        ///     Source storage name
-        /// </summary>
-        public string SrcStorageName { get; set; }
+        /// Destination storage name
+        /// </summary>  
+        public string destStorageName { get; set; }
 
         /// <summary>
-        ///     Destination storage name
-        /// </summary>
-        public string DestStorageName { get; set; }
-
-        /// <summary>
-        ///     File version ID to move
-        /// </summary>
-        public string VersionId { get; set; }
-    }
+        /// File version ID to move
+        /// </summary>  
+        public string versionId { get; set; }
+  }
 }

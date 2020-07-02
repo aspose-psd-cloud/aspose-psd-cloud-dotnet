@@ -23,46 +23,48 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Psd.Cloud.Sdk.Model.Requests
+namespace Aspose.Psd.Cloud.Sdk.Model.Requests 
 {
-    /// <summary>
-    ///     Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.DownloadFile" /> operation.
-    /// </summary>
-    public class DownloadFileRequest
-    {
+  using Aspose.Psd.Cloud.Sdk.Model; 
+
+  /// <summary>
+  /// Request model for <see cref="Aspose.Psd.Cloud.Sdk.Api.PsdApi.DownloadFile" /> operation.
+  /// </summary>  
+  public class DownloadFileRequest  
+  {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="DownloadFileRequest" /> class.
-        /// </summary>
+        /// Initializes a new instance of the <see cref="DownloadFileRequest"/> class.
+        /// </summary>        
         public DownloadFileRequest()
         {
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="DownloadFileRequest" /> class.
+        /// Initializes a new instance of the <see cref="DownloadFileRequest"/> class.
         /// </summary>
         /// <param name="path">File path e.g. &#39;/folder/file.ext&#39;</param>
         /// <param name="storageName">Storage name</param>
         /// <param name="versionId">File version ID to download</param>
-        public DownloadFileRequest(string path, string storageName = null, string versionId = null)
+        public DownloadFileRequest(string path, string storageName = null, string versionId = null)             
         {
-            Path = path;
-            StorageName = storageName;
-            VersionId = versionId;
+            this.path = path;
+            this.storageName = storageName;
+            this.versionId = versionId;
         }
+        
+        /// <summary>
+        /// File path e.g. '/folder/file.ext'
+        /// </summary>  
+        public string path { get; set; }
 
         /// <summary>
-        ///     File path e.g. '/folder/file.ext'
-        /// </summary>
-        public string Path { get; set; }
+        /// Storage name
+        /// </summary>  
+        public string storageName { get; set; }
 
         /// <summary>
-        ///     Storage name
-        /// </summary>
-        public string StorageName { get; set; }
-
-        /// <summary>
-        ///     File version ID to download
-        /// </summary>
-        public string VersionId { get; set; }
-    }
+        /// File version ID to download
+        /// </summary>  
+        public string versionId { get; set; }
+  }
 }

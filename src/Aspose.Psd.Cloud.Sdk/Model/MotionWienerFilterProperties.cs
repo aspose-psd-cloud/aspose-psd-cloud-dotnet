@@ -23,43 +23,49 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
-namespace Aspose.Psd.Cloud.Sdk.Model
+namespace Aspose.Psd.Cloud.Sdk.Model 
 {
-    /// <summary>
-    ///     Deconvolution filter options deblur motion
-    /// </summary>
-    public class MotionWienerFilterProperties : DeconvolutionFilterProperties
-    {
+  using System;  
+  using System.Collections;
+  using System.Collections.Generic;
+  using System.Runtime.Serialization;
+  using System.Text;
+  using Newtonsoft.Json;
+  using Newtonsoft.Json.Converters;
+
+  /// <summary>
+  /// Deconvolution filter options deblur motion             
+  /// </summary>  
+  public class MotionWienerFilterProperties : DeconvolutionFilterProperties 
+  {                       
         /// <summary>
-        ///     Gets or sets the length.
-        /// </summary>
+        /// Gets or sets the length.             
+        /// </summary>  
         public int? Length { get; set; }
 
         /// <summary>
-        ///     Gets or sets the smooth.
-        /// </summary>
+        /// Gets or sets the smooth.             
+        /// </summary>  
         public double? Smooth { get; set; }
 
         /// <summary>
-        ///     Gets or sets the angle in degree.
-        /// </summary>
+        /// Gets or sets the angle in gradus.             
+        /// </summary>  
         public double? Angle { get; set; }
 
         /// <summary>
-        ///     Get the string presentation of the object
+        /// Get the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
-        public override string ToString()
+        public override string ToString()  
         {
-            var sb = new StringBuilder();
-            sb.Append("class MotionWienerFilterProperties {\n");
-            sb.Append("  Length: ").Append(Length).Append("\n");
-            sb.Append("  Smooth: ").Append(Smooth).Append("\n");
-            sb.Append("  Angle: ").Append(Angle).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
+          var sb = new StringBuilder();
+          sb.Append("class MotionWienerFilterProperties {\n");
+          sb.Append("  Length: ").Append(this.Length).Append("\n");
+          sb.Append("  Smooth: ").Append(this.Smooth).Append("\n");
+          sb.Append("  Angle: ").Append(this.Angle).Append("\n");
+          sb.Append("}\n");
+          return sb.ToString();
         }
     }
 }
