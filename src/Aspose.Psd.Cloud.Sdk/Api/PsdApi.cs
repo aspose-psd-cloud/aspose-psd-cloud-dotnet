@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ImagingApi.cs">
+// <copyright company="Aspose" file="PsdApi.cs">
 //   Copyright (c) 2018-2020 Aspose Pty Ltd. All rights reserved.
 // </copyright>
 // <summary>
@@ -36,7 +36,7 @@ namespace Aspose.Psd.Cloud.Sdk.Api
     /// <summary>
     /// Aspose.Psd Cloud API.
     /// </summary>
-    public class ImagingApi
+    public class PsdApi
     {                 
         #region Fields
 
@@ -55,7 +55,7 @@ namespace Aspose.Psd.Cloud.Sdk.Api
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ImagingApi"/> class for Aspose Cloud-hosted solution usage.
+        /// Initializes a new instance of the <see cref="PsdApi"/> class for Aspose Cloud-hosted solution usage.
         /// </summary>
         /// <param name="appKey">
         /// The app key.
@@ -72,7 +72,7 @@ namespace Aspose.Psd.Cloud.Sdk.Api
         /// <param name="debug">
         /// If debug mode is enabled.
         /// </param>
-        public ImagingApi(string appKey, string appSid, string baseUrl = Configuration.DefaultBaseUrl, 
+        public PsdApi(string appKey, string appSid, string baseUrl = Configuration.DefaultBaseUrl, 
             string apiVersion = Configuration.DefaultApiVersion, bool debug = false)
             : this(new Configuration
             {
@@ -87,7 +87,7 @@ namespace Aspose.Psd.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ImagingApi"/> class for on-premise solution with metered license usage.
+        /// Initializes a new instance of the <see cref="PsdApi"/> class for on-premise solution with metered license usage.
         /// </summary>
         /// <param name="baseUrl">
         /// The base URL of your server.
@@ -98,7 +98,7 @@ namespace Aspose.Psd.Cloud.Sdk.Api
         /// <param name="debug">
         /// If debug mode is enabled.
         /// </param>
-        public ImagingApi(string baseUrl, string apiVersion = Configuration.DefaultApiVersion, bool debug = false)
+        public PsdApi(string baseUrl, string apiVersion = Configuration.DefaultApiVersion, bool debug = false)
             : this(new Configuration
             {
                 ApiBaseUrl = baseUrl,
@@ -110,10 +110,10 @@ namespace Aspose.Psd.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ImagingApi"/> class.
+        /// Initializes a new instance of the <see cref="PsdApi"/> class.
         /// </summary>    
         /// <param name="configuration">Configuration settings</param>
-        private ImagingApi(Configuration configuration)
+        private PsdApi(Configuration configuration)
         {
             this.Configuration = configuration;
             var requestHandlers = new List<IRequestHandler>();
