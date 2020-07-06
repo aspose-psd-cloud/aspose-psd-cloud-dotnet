@@ -98,7 +98,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
         /// <summary>
         ///     Aspose.Psd API
         /// </summary>
-        protected ImagingApi PsdApi;
+        protected PsdApi PsdApi;
 
         /// <summary>
         ///     The temporary folder
@@ -220,8 +220,8 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
             WriteLineEverywhere($"Base URL: {baseUrl}");
             WriteLineEverywhere($"API version: {apiVersion}");
             PsdApi = onPremise
-                ? new ImagingApi(baseUrl, apiVersion, false)
-                : new ImagingApi(appKey, appSid, baseUrl, apiVersion);
+                ? new PsdApi(baseUrl, apiVersion, false)
+                : new PsdApi(appKey, appSid, baseUrl, apiVersion);
 
             InputTestFiles = FetchInputTestFilesInfo();
         }
