@@ -113,7 +113,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
         /// <summary>
         ///     Original test data folder
         /// </summary>
-        protected virtual string OriginalDataFolder => "ImagingIntegrationTestData";
+        protected virtual string OriginalDataFolder => "PsdIntegrationTestData";
 
         /// <summary>
         ///     The default storage
