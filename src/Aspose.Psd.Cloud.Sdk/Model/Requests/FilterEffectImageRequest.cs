@@ -45,7 +45,7 @@ namespace Aspose.Psd.Cloud.Sdk.Model.Requests
         /// <param name="name">Filename of an image.</param>
         /// <param name="filterType">Filter type (BigRectangular, SmallRectangular, Median, GaussWiener, MotionWiener, GaussianBlur, Sharpen, BilateralSmoothing).</param>
         /// <param name="filterProperties">Filter properties.</param>
-        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/psdcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
+        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/psd/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
         /// <param name="folder">Folder with image to process.</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
         public FilterEffectImageRequest(string name, string filterType, FilterPropertiesBase filterProperties, string format = null, string folder = null, string storage = null)             
@@ -74,7 +74,7 @@ namespace Aspose.Psd.Cloud.Sdk.Model.Requests
         public FilterPropertiesBase filterProperties { get; set; }
 
         /// <summary>
-        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/psdgcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
+        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/psd/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
         /// </summary>  
         public string format { get; set; }
 

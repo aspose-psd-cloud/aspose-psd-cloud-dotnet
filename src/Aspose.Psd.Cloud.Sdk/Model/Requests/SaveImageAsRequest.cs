@@ -43,7 +43,7 @@ namespace Aspose.Psd.Cloud.Sdk.Model.Requests
         /// Initializes a new instance of the <see cref="SaveImageAsRequest"/> class.
         /// </summary>
         /// <param name="name">Filename of image.</param>
-        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/psdcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
+        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/psd/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
         /// <param name="folder">Folder with image to process.</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
         public SaveImageAsRequest(string name, string format, string folder = null, string storage = null)             
@@ -60,7 +60,7 @@ namespace Aspose.Psd.Cloud.Sdk.Model.Requests
         public string name { get; set; }
 
         /// <summary>
-        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/psdcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
+        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/psd/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
         /// </summary>  
         public string format { get; set; }
 

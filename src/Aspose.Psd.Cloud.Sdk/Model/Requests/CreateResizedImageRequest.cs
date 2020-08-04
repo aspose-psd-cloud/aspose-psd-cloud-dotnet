@@ -45,7 +45,7 @@ namespace Aspose.Psd.Cloud.Sdk.Model.Requests
         /// <param name="imageData">Input image</param>
         /// <param name="newWidth">New width.</param>
         /// <param name="newHeight">New height.</param>
-        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/psdcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
+        /// <param name="format">Resulting image format. Please, refer to https://docs.aspose.cloud/display/psd/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.</param>
         /// <param name="outPath">Path to updated file (if this is empty, response contains streamed image).</param>
         /// <param name="storage">Your Aspose Cloud Storage name.</param>
         public CreateResizedImageRequest(System.IO.Stream imageData, int? newWidth, int? newHeight, string format = null, string outPath = null, string storage = null)             
@@ -74,7 +74,7 @@ namespace Aspose.Psd.Cloud.Sdk.Model.Requests
         public int? newHeight { get; set; }
 
         /// <summary>
-        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/psdcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
+        /// Resulting image format. Please, refer to https://docs.aspose.cloud/display/psd/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap for possible use-cases.
         /// </summary>  
         public string format { get; set; }
 
