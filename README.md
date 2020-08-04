@@ -1,5 +1,5 @@
-# Aspose.PSD Cloud .NET SDK [![NuGet](https://img.shields.io/nuget/v/Aspose.Imaging-Cloud.svg)](https://www.nuget.org/packages/Aspose.Imaging-Cloud/)
-[Aspose.PSD Cloud](https://products.aspose.cloud/psd) is a true [REST API](https://apireference.aspose.cloud/psd/) that enables you to perform a wide range of image processing operations including creation, manipulation and conversion in the cloud, with zero initial costs. Our Cloud SDKs are wrappers around REST API in various programming languages, allowing you to process images in language of your choice quickly and easily, gaining all benefits of strong types and IDE highlights. 
+# Aspose.PSD Cloud .NET SDK [![NuGet](https://img.shields.io/nuget/v/Aspose.PSD-Cloud.svg)](https://www.nuget.org/packages/Aspose.PSD-Cloud/)
+[Aspose.PSD Cloud](https://products.aspose.cloud/psd) is a true [REST API](https://apireference.aspose.cloud/psd/) that enables you to perform a wide range of PSD image processing operations including creation, manipulation and conversion in the cloud, with zero initial costs. Our Cloud SDKs are wrappers around REST API in various programming languages, allowing you to process images in the language of your choice quickly and easily, gaining all benefits of strong types and IDE highlights. 
 
 This repository contains [Aspose.PSD Cloud .NET SDK](https://products.aspose.cloud/psd/net) source code. This SDK allows you to work with Aspose.PSD Cloud REST APIs in your .NET applications quickly and easily, with zero initial cost.
 
@@ -23,15 +23,15 @@ SDK includes support of storage operations for better user experience and unific
 It gives you an ability to:
 * Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default)
 * Create, copy, move and delete folders
-* Copy and move files and folders accross separate storages in scope of a single operation
+* Copy and move files and folders across separate storages in the scope of a single operation
 * Check if certain file, folder or storage exists
 
-Detalied official documentation can be found at the [following link](https://docs.aspose.cloud/display/imagingcloud).
+Detailed official documentation can be found at the [following link](https://docs.aspose.cloud/display/psdcloud).
 
 ## Getting Started
 1. **Sign Up**. Before you begin, you need to sign up for an account on our [Dashboard](https://dashboard.aspose.cloud/) and retrieve your [credentials](https://dashboard.aspose.cloud/#/apps).
 2. **Minimum requirements**. This SDK requires [.NET Framework 2.0 or later](https://dotnet.microsoft.com/download).
-3. **Install Aspose.Imaging Cloud .NET SDK**. Please, add the following [NuGet package](https://www.nuget.org/packages/Aspose.PSD-Cloud/) to your project.
+3. **Install Aspose.PSD Cloud .NET SDK**. Please, add the following [NuGet package](https://www.nuget.org/packages/Aspose.PSD-Cloud/) to your project.
 4. **Using the SDK**. The best way to become familiar with how to use the SDK is to read the [Developer Guide](https://docs.aspose.cloud/display/psdcloud/Developer+Guide). The [Getting Started Guide](https://docs.aspose.cloud/display/psdcloud/Getting+Started) will help you to become familiar with the common concepts.
 
 ## Quick Examples
@@ -71,7 +71,7 @@ Your feedback is very important to us. Please feel free to contact via
 + [**Blog**](https://blog.aspose.cloud/category/aspose-products/aspose.psd-cloud/)
 
 ## Other languages
-We generate our SDKs in different languages so you may check if yours is available in our [repository](https://github.com/aspose-imaging-cloud). If you don't find your language in the list, feel free to request it from us, or use raw REST API requests as you can find it [here](https://products.aspose.cloud/imaging/curl).
+We generate our SDKs in different languages so you may check if yours is available in our [repository](https://github.com/aspose-psd-cloud). If you don't find your language in the list, feel free to request it from us, or use raw REST API requests as you can find it [here](https://products.aspose.cloud/psd/curl).
 
 ## Code generator
 The solution is updated using [code generator](https://github.com/aspose-psd-cloud/aspose-psd-cloud-codegen).
