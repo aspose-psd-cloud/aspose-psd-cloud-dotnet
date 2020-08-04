@@ -5,6 +5,7 @@ This repository contains [Aspose.PSD Cloud .NET SDK](https://products.aspose.clo
 
 To use this SDK, you will need App SID and App Key which can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (free registration in Aspose Cloud is required for this).
 
+## Key Features
 #### Supported Operations
 * Export
 * Resize
