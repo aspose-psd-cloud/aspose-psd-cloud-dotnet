@@ -17,7 +17,7 @@
     <PackageId>Aspose.Psd-Cloud</PackageId>
     <PackageVersion>20.4.0</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageTags>aspose psd cloud rest api sdk image psd reverse search image-effects image-filters deskewing image-crop image-rotate image-conversion image-metadata</PackageTags>
+    <PackageTags>aspose psd cloud rest api sdk image psd image-effects image-filters deskewing image-crop image-rotate image-conversion image-metadata</PackageTags>
     <PackageProjectUrl>https://github.com/aspose-psd-cloud/aspose-psd-cloud-dotnet</PackageProjectUrl>
     <PackageIconUrl>https://www.aspose.cloud/templates/aspose/App_Themes/V3/images/imaging/272x272/aspose_imaging-for-net-min.png</PackageIconUrl>
     <PackageReleaseNotes>https://docs.aspose.cloud/display/psdcloud/Aspose.Psd+Cloud+20.4+-+Release+Notes</PackageReleaseNotes>
@@ -28,13 +28,11 @@
     <Authors>Aspose</Authors>
     <ProductName>Aspose.Psd Cloud .NET SDK</ProductName>
     <ProductVersion>20.4</ProductVersion>
-    <Description>      Aspose.Psd Cloud lets you use a REST API to inspect, convert, and transform images in the cloud; do reverse image search. It supports the most popular image formats such as PSD, PNG, GIF, BMP, TIFF, and JPEG, and conversion between them.
+    <Description>      Aspose.Psd Cloud lets you use a REST API to inspect, convert, and transform images in the cloud.
 
       Aspose.Psd Cloud also provides a rich set of features for manipulating images on-the-fly with cloud based image transformations. You can resize, crop and/or rotate images various ways by simply creating a request that includes the correct transformation instructions.
 
-      The most demanding imaging routines, for example TIFF concatenation and image conversion to fax compatible format, are available through efficient and reliable specialized resources.
-
-      Reverse image search features include: search for sample image in the image set, duplicates recognition, search image by associated tags, etc. You can perform these operations without needing to know what's going on under the hood so that you can focus on the core business goals.</Description>
+      You can perform these operations without needing to know what's going on under the hood so that you can focus on the core business goals.</Description>
     <Copyright>Copyright © 2002-2020 Aspose Pty Ltd. All Rights Reserved.</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <IncludeSymbols>true</IncludeSymbols>
