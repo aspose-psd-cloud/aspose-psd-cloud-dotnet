@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -39,8 +39,8 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         ///     Initializes a new instance of the <see cref="ImageProperties" /> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        public ImageProperties(ImagingApi imagingApi) : base(imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        public ImageProperties(PsdApi psdApi) : base(psdApi)
         {
             PrintHeader("Image properties example:");
         }
@@ -70,7 +70,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine("Call GetImageProperties");
 
-            var imagingResponse = ImagingApi.GetImageProperties(getImagePropertiesRequest);
+            var imagingResponse = PsdApi.GetImageProperties(getImagePropertiesRequest);
 
             OutputPropertiesToFile("ImageProperties.txt", imagingResponse);
 
@@ -90,7 +90,7 @@ namespace AsposePsdCloudSdkExamples
 
                 Console.WriteLine("Call ExtractImageProperties");
 
-                var imagingResponse = ImagingApi.ExtractImageProperties(imagePropertiesRequest);
+                var imagingResponse = PsdApi.ExtractImageProperties(imagePropertiesRequest);
                 OutputPropertiesToFile("ImagePropertiesFromRequest.txt", imagingResponse);
             }
 

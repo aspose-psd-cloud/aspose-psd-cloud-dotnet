@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -39,8 +39,8 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         ///     Initializes a new instance of the <see cref="CropImage" /> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        public CropImage(ImagingApi imagingApi) : base(imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        public CropImage(PsdApi psdApi) : base(psdApi)
         {
             PrintHeader("Crop image example:");
         }
@@ -74,7 +74,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call CropImage with params:x:{x},y:{y}, width:{width}, height:{height}");
 
-            using (var updatedImage = ImagingApi.CropImage(request))
+            using (var updatedImage = PsdApi.CropImage(request))
             {
                 SaveUpdatedSampleImageToOutput(updatedImage, false, format);
             }
@@ -105,7 +105,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call CropImage with params:x:{x},y:{y}, width:{width}, height:{height}");
 
-            using (var updatedImage = ImagingApi.CropImage(request))
+            using (var updatedImage = PsdApi.CropImage(request))
             {
                 UploadImageToCloud(GetModifiedSampleImageFileName(false, format), updatedImage);
             }
@@ -137,7 +137,7 @@ namespace AsposePsdCloudSdkExamples
 
                 Console.WriteLine($"Call CreateCroppedImage with params:x:{x},y:{y}, width:{width}, height:{height}");
 
-                using (var updatedImage = ImagingApi.CreateCroppedImage(request))
+                using (var updatedImage = PsdApi.CreateCroppedImage(request))
                 {
                     SaveUpdatedSampleImageToOutput(updatedImage, true, format);
                 }

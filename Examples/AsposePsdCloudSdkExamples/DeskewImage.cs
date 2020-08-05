@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -39,8 +39,8 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         /// Initializes a new instance of the <see cref="DeskewImage"/> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        public DeskewImage(ImagingApi imagingApi) : base(imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        public DeskewImage(PsdApi psdApi) : base(psdApi)
         {
             PrintHeader("Deskew image example:");
         }
@@ -70,7 +70,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call DeskewImage with params: resizeProportionally:{resizeProportionally}, bkColor:{bkColor}");
 
-            using (Stream updatedImage = this.ImagingApi.DeskewImage(request))
+            using (Stream updatedImage = this.PsdApi.DeskewImage(request))
             {
                 SaveUpdatedSampleImageToOutput(updatedImage, false, SaveImageFormat);
             }
@@ -96,7 +96,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call DeskewImage with params: resizeProportionally:{resizeProportionally}, bkColor:{bkColor}");
 
-            using (Stream updatedImage = this.ImagingApi.DeskewImage(request))
+            using (Stream updatedImage = this.PsdApi.DeskewImage(request))
             {
                 UploadImageToCloud(GetModifiedSampleImageFileName(false, SaveImageFormat), updatedImage);
             }
@@ -122,7 +122,7 @@ namespace AsposePsdCloudSdkExamples
 
                 Console.WriteLine($"Call DeskewImage with params: resizeProportionally:{resizeProportionally}, bkColor:{bkColor}");
 
-                using (Stream updatedImage = this.ImagingApi.CreateDeskewedImage(request))
+                using (Stream updatedImage = this.PsdApi.CreateDeskewedImage(request))
                 {
                     SaveUpdatedSampleImageToOutput(updatedImage, true, SaveImageFormat);
                 }

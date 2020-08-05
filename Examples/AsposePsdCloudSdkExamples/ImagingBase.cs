@@ -25,9 +25,9 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -44,10 +44,10 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         ///     Initializes a new instance of the <see cref="ImagingBase" /> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        protected ImagingBase(ImagingApi imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        protected ImagingBase(PsdApi psdApi)
         {
-            ImagingApi = imagingApi;
+            PsdApi = psdApi;
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace AsposePsdCloudSdkExamples
         /// <value>
         ///     The imaging API.
         /// </value>
-        protected ImagingApi ImagingApi { get; }
+        protected PsdApi PsdApi { get; }
 
         /// <summary>
         ///     Gets the name of the example image file.
@@ -135,7 +135,7 @@ namespace AsposePsdCloudSdkExamples
         protected void UploadImageToCloud(string imageName, Stream image)
         {
             var uploadFileRequest = new UploadFileRequest(Path.Combine(CloudPath, imageName), image);
-            var result = ImagingApi.UploadFile(uploadFileRequest);
+            var result = PsdApi.UploadFile(uploadFileRequest);
             Console.WriteLine(result.Errors?.Count > 0
                 ? $"Uploading errors count: {result.Errors.Count}"
                 : $"Image {imageName} is uploaded to cloud storage");
@@ -188,15 +188,6 @@ namespace AsposePsdCloudSdkExamples
                 writer.WriteLine($"Horizontal resolution: {imagingResponse.HorizontalResolution}");
                 writer.WriteLine($"Vertical resolution: {imagingResponse.VerticalResolution}");
                 writer.WriteLine($"Bits per pixel: {imagingResponse.BitsPerPixel}");
-
-                if (imagingResponse.TiffProperties != null)
-                {
-                    writer.WriteLine("Tiff properties:");
-
-                    writer.WriteLine($"Frames count: {imagingResponse.TiffProperties.Frames.Count}");
-                    writer.WriteLine($"Camera owner name: {imagingResponse.TiffProperties.ExifData?.CameraOwnerName}");
-                    writer.WriteLine($"Byte order: {imagingResponse.TiffProperties.ByteOrder}");
-                }
             }
 
             Console.WriteLine($"File {fileName} is saved to {Path.GetDirectoryName(path)}");

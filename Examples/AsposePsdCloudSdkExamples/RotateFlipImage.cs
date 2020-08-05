@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -39,8 +39,8 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         ///     Initializes a new instance of the <see cref="RotateFlipImage" /> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        public RotateFlipImage(ImagingApi imagingApi) : base(imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        public RotateFlipImage(PsdApi psdApi) : base(psdApi)
         {
             PrintHeader("Rotate/flip image example:");
         }
@@ -71,7 +71,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call RotateFlipImage with params: method:{method}, format:{format}");
 
-            using (var updatedImage = ImagingApi.RotateFlipImage(getImageRotateFlipRequest))
+            using (var updatedImage = PsdApi.RotateFlipImage(getImageRotateFlipRequest))
             {
                 SaveUpdatedSampleImageToOutput(updatedImage, false, format);
             }
@@ -100,7 +100,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call RotateFlipImage with params: method:{method}, format:{format}");
 
-            using (var updatedImage = ImagingApi.RotateFlipImage(getImageRotateFlipRequest))
+            using (var updatedImage = PsdApi.RotateFlipImage(getImageRotateFlipRequest))
             {
                 UploadImageToCloud(GetModifiedSampleImageFileName(false, format), updatedImage);
             }
@@ -130,7 +130,7 @@ namespace AsposePsdCloudSdkExamples
 
                 Console.WriteLine($"Call CreateRotateFlippedImage with params: method:{method}, format:{format}");
 
-                using (var updatedImage = ImagingApi.CreateRotateFlippedImage(createRotateFlippedImageRequest))
+                using (var updatedImage = PsdApi.CreateRotateFlippedImage(createRotateFlippedImageRequest))
                 {
                     SaveUpdatedSampleImageToOutput(updatedImage, true, format);
                 }

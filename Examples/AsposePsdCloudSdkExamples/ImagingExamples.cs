@@ -27,7 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Aspose.Imaging.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Api;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -43,12 +43,11 @@ namespace AsposePsdCloudSdkExamples
         private static void Main(string[] args)
         {
             string appKey, appSid, baseUrl;
-            // ProcessArguments(args, out appKey, out appSid, out baseUrl);
+            ProcessArguments(args, out appKey, out appSid, out baseUrl);
 
             try
             {
-                // var api = new ImagingApi(appKey, appSid, baseUrl);
-                var api = new ImagingApi("http://localhost:57972/", "v1.0", false);
+                var api = new PsdApi(appKey, appSid, baseUrl);
 
                 PrepareOutput();
 
@@ -78,11 +77,6 @@ namespace AsposePsdCloudSdkExamples
                 exportImage.SaveImageAsFromStorage();
                 exportImage.SaveImageAsAndUploadToStorage();
                 exportImage.CreateSavedImageAsFromRequestBody();
-                
-                // Apply a filtering effect to an image
-                var filterImage = new FilterImage(api);
-                filterImage.FilterImageFromStorage();
-                filterImage.FilterImageAndUploadToStorage();
                 
                 // Get properties of an image
                 var imageProperties = new ImageProperties(api);

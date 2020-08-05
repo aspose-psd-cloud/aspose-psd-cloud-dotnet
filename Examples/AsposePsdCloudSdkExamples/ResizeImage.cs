@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -39,8 +39,8 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         ///     Initializes a new instance of the <see cref="ResizeImage" /> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        public ResizeImage(ImagingApi imagingApi) : base(imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        public ResizeImage(PsdApi psdApi) : base(psdApi)
         {
             PrintHeader("Resize an image example:");
         }
@@ -74,7 +74,7 @@ namespace AsposePsdCloudSdkExamples
             Console.WriteLine(
                 $"Call ResizeImage with params: new width:{newWidth}, new height:{newHeight}, format:{format}");
 
-            using (var updatedImage = ImagingApi.ResizeImage(resizeImageRequest))
+            using (var updatedImage = PsdApi.ResizeImage(resizeImageRequest))
             {
                 // Save updated image to local storage
                 SaveUpdatedSampleImageToOutput(updatedImage, false);
@@ -107,7 +107,7 @@ namespace AsposePsdCloudSdkExamples
             Console.WriteLine(
                 $"Call ResizeImage with params: new width:{newWidth}, new height:{newHeight}, format:{format}");
 
-            using (var updatedImage = ImagingApi.ResizeImage(resizeImageRequest))
+            using (var updatedImage = PsdApi.ResizeImage(resizeImageRequest))
             {
                 // Upload updated image to Cloud Storage
                 UploadImageToCloud(GetModifiedSampleImageFileName(false, format), updatedImage);
@@ -139,7 +139,7 @@ namespace AsposePsdCloudSdkExamples
                 Console.WriteLine(
                     $"Call CreateResizedImage with params: new width:{newWidth}, new height:{newHeight}, format:{format}");
 
-                using (var updatedImage = ImagingApi.CreateResizedImage(createResizedImageRequest))
+                using (var updatedImage = PsdApi.CreateResizedImage(createResizedImageRequest))
                 {
                     // Save updated image to local storage
                     SaveUpdatedSampleImageToOutput(updatedImage, true, format);

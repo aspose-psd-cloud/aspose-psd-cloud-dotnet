@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -39,8 +39,8 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         /// Initializes a new instance of the <see cref="GrayscaleImage"/> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        public GrayscaleImage(ImagingApi imagingApi) : base(imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        public GrayscaleImage(PsdApi psdApi) : base(psdApi)
         {
             PrintHeader("Grayscale image example:");
         }
@@ -68,7 +68,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call Grayscale Image");
 
-            using (Stream updatedImage = this.ImagingApi.GrayscaleImage(request))
+            using (Stream updatedImage = this.PsdApi.GrayscaleImage(request))
             {
                 SaveUpdatedSampleImageToOutput(updatedImage, false, SaveImageFormat);
             }
@@ -92,7 +92,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call Grayscale Image");
 
-            using (Stream updatedImage = this.ImagingApi.GrayscaleImage(request))
+            using (Stream updatedImage = this.PsdApi.GrayscaleImage(request))
             {
                 UploadImageToCloud(GetModifiedSampleImageFileName(false, SaveImageFormat), updatedImage);
             }
@@ -116,7 +116,7 @@ namespace AsposePsdCloudSdkExamples
 
                 Console.WriteLine($"Call CreateGrayscale Image");
 
-                using (Stream updatedImage = this.ImagingApi.CreateGrayscaledImage(request))
+                using (Stream updatedImage = this.PsdApi.CreateGrayscaledImage(request))
                 {
                     SaveUpdatedSampleImageToOutput(updatedImage, true, SaveImageFormat);
                 }

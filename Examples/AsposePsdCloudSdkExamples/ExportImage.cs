@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -39,8 +39,8 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         ///     Initializes a new instance of the <see cref="ExportImage" /> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        public ExportImage(ImagingApi imagingApi) : base(imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        public ExportImage(PsdApi psdApi) : base(psdApi)
         {
             PrintHeader("Export image example:");
         }
@@ -69,7 +69,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call SaveImageAs with params: format:{format}");
 
-            using (var updatedImage = ImagingApi.SaveImageAs(request))
+            using (var updatedImage = PsdApi.SaveImageAs(request))
             {
                 SaveUpdatedSampleImageToOutput(updatedImage, false, format);
             }
@@ -96,7 +96,7 @@ namespace AsposePsdCloudSdkExamples
 
             Console.WriteLine($"Call SaveImageAs with params: format:{format}");
 
-            using (var updatedImage = ImagingApi.SaveImageAs(request))
+            using (var updatedImage = PsdApi.SaveImageAs(request))
             {
                 UploadImageToCloud(GetModifiedSampleImageFileName(false, format), updatedImage);
             }
@@ -123,7 +123,7 @@ namespace AsposePsdCloudSdkExamples
 
                 Console.WriteLine($"Call CreateSavedImageAs with params: format:{format}");
 
-                using (var updatedImage = ImagingApi.CreateSavedImageAs(request))
+                using (var updatedImage = PsdApi.CreateSavedImageAs(request))
                 {
                     SaveUpdatedSampleImageToOutput(updatedImage, true, format);
                 }

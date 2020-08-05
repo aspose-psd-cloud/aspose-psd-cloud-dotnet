@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Aspose.Imaging.Cloud.Sdk.Api;
-using Aspose.Imaging.Cloud.Sdk.Model.Requests;
+using Aspose.Psd.Cloud.Sdk.Api;
+using Aspose.Psd.Cloud.Sdk.Model.Requests;
 
 namespace AsposePsdCloudSdkExamples
 {
@@ -39,8 +39,8 @@ namespace AsposePsdCloudSdkExamples
         /// <summary>
         ///     Initializes a new instance of the <see cref="UpdatePsdImage" /> class.
         /// </summary>
-        /// <param name="imagingApi">The imaging API.</param>
-        public UpdatePsdImage(ImagingApi imagingApi) : base(imagingApi)
+        /// <param name="psdApi">The imaging API.</param>
+        public UpdatePsdImage(PsdApi psdApi) : base(psdApi)
         {
             PrintHeader("Update PSD image example:");
         }
@@ -75,7 +75,7 @@ namespace AsposePsdCloudSdkExamples
             Console.WriteLine(
                 $"Call ModifyPsd with params: channels count:{channelsCount}, compression method:{compressionMethod}");
 
-            using (var updatedImage = ImagingApi.ModifyPsd(modifyPsdRequest))
+            using (var updatedImage = PsdApi.ModifyPsd(modifyPsdRequest))
             {
                 SaveUpdatedSampleImageToOutput(updatedImage, false);
             }
@@ -105,7 +105,7 @@ namespace AsposePsdCloudSdkExamples
             Console.WriteLine(
                 $"Call ModifyPsd with params: channels count:{channelsCount}, compression method:{compressionMethod}");
 
-            using (var updatedImage = ImagingApi.ModifyPsd(modifyPsdRequest))
+            using (var updatedImage = PsdApi.ModifyPsd(modifyPsdRequest))
             {
                 UploadImageToCloud(GetModifiedSampleImageFileName(), updatedImage);
             }
@@ -135,7 +135,7 @@ namespace AsposePsdCloudSdkExamples
                 Console.WriteLine(
                     $"Call CreateModifiedPsd with params: channels count:{channelsCount}, compression method:{compressionMethod}");
 
-                using (var updatedImage = ImagingApi.CreateModifiedPsd(modifiedPsdRequest))
+                using (var updatedImage = PsdApi.CreateModifiedPsd(modifiedPsdRequest))
                 {
                     SaveUpdatedSampleImageToOutput(updatedImage, true);
                 }
