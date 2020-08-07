@@ -3,9 +3,9 @@
 
   <PropertyGroup>
     <SuppressDependenciesWhenPacking>false</SuppressDependenciesWhenPacking>
-    <AssemblyVersion>20.4.0.0</AssemblyVersion>
-    <FileVersion>20.4.0.0</FileVersion>
-    <Version>20.4.0</Version>
+    <AssemblyVersion>20.8.0.0</AssemblyVersion>
+    <FileVersion>20.8.0.0</FileVersion>
+    <Version>20.8.0</Version>
     <DebugType>full</DebugType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Aspose.Psd.Cloud.Sdk.xml</DocumentationFile>
@@ -15,7 +15,7 @@
 
   <PropertyGroup>
     <PackageId>Aspose.Psd-Cloud</PackageId>
-    <PackageVersion>20.4.0</PackageVersion>
+    <PackageVersion>20.8.0</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageTags>aspose psd cloud rest api sdk image psd image-effects image-filters deskewing image-crop image-rotate image-conversion image-metadata</PackageTags>
     <PackageProjectUrl>https://github.com/aspose-psd-cloud/aspose-psd-cloud-dotnet</PackageProjectUrl>
@@ -27,7 +27,7 @@
     <Company>Aspose</Company>
     <Authors>Aspose</Authors>
     <ProductName>Aspose.Psd Cloud .NET SDK</ProductName>
-    <ProductVersion>20.4</ProductVersion>
+    <ProductVersion>20.8</ProductVersion>
     <Description>      Aspose.Psd Cloud lets you use a REST API to inspect, convert, and transform images in the cloud.
 
       Aspose.Psd Cloud also provides a rich set of features for manipulating images on-the-fly with cloud based image transformations. You can resize, crop and/or rotate images various ways by simply creating a request that includes the correct transformation instructions.
