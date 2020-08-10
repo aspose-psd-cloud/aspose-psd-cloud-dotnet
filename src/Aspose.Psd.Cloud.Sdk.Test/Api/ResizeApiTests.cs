@@ -34,7 +34,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
     /// <summary>
     ///     Class for testing ResizeApi
     /// </summary>
-    [Category("v1.0")]
+    [Category("v3.0")]
     [Category("Resize")]
     [TestFixture]
     public class ResizeApiTests : PsdApiTester

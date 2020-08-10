@@ -41,7 +41,7 @@ namespace Aspose.Psd.Cloud.Sdk.Client
         /// <summary>
         ///     The default API version
         /// </summary>
-        public const string DefaultApiVersion = "v1.0";
+        public const string DefaultApiVersion = "v3.0";
 
         /// <summary>
         ///     The API base URL

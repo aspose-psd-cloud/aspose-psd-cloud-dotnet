@@ -35,7 +35,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
     /// <summary>
     ///     Class for testing RotateFlipApi
     /// </summary>
-    [Category("v1.0")]
+    [Category("v3.0")]
     [Category("RotateFlip")]
     [TestFixture]
     public class RotateFlipApiTests : PsdApiTester

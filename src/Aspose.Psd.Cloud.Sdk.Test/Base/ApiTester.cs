@@ -50,7 +50,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
         /// <summary>
         ///     The API version
         /// </summary>
-        private const string ApiVersion = "v1.0";
+        private const string ApiVersion = "v3.0";
 
         /// <summary>
         ///     The base URL

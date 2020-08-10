@@ -33,7 +33,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
     /// <summary>
     ///     Class for testing SaveAsApi
     /// </summary>
-    [Category("v1.0")]
+    [Category("v3.0")]
     [Category("SaveAs")]
     [TestFixture]
     public class SaveAsApiTests : PsdApiTester

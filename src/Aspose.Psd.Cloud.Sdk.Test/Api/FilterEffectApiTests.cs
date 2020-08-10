@@ -34,7 +34,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
     /// <summary>
     ///     Class for testing FilterEffectApi
     /// </summary>
-    [Category("v1.0")]
+    [Category("v3.0")]
     [Category("FilterEffect")]
     [TestFixture]
     public class FilterEffectApiTests : PsdApiTester

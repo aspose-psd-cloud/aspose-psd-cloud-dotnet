@@ -34,7 +34,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
     /// <summary>
     ///     Class for testing CropApi
     /// </summary>
-    [Category("v1.0")]
+    [Category("v3.0")]
     [Category("Crop")]
     [TestFixture]
     public class CropApiTests : PsdApiTester

@@ -35,7 +35,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api
     ///     Class for testing UpdateImageApi
     /// </summary>
     [TestFixture]
-    [Category("v1.0")]
+    [Category("v3.0")]
     [Category("Update")]
     public class UpdateImageApiTests : PsdApiTester
     {

@@ -32,7 +32,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Api.Storage
     ///     Storage API tester.
     /// </summary>
     /// <seealso cref="ApiTester" />
-    [Category("v1.0")]
+    [Category("v3.0")]
     [Category("Storage")]
     [TestFixture]
     public class StorageApiTester : ApiTester
