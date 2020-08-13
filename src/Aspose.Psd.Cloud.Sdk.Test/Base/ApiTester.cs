@@ -60,7 +60,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
         /// <summary>
         ///     The default storage
         /// </summary>
-        protected const string DefaultStorage = "Local-CI-Linux";
+        protected const string DefaultStorage = "PSD-CI";
 
         /// <summary>
         ///     If any test failed
