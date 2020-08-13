@@ -445,7 +445,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
                                 $"Result file {resultFileName} doesn't exist in the specified storage folder: {folder}. " +
                                 "Result isn't present in the storage by an unknown reason.");
 
-                        if (!resultFileName.EndsWith(".pdf"))
+                        if (resultFileName.EndsWith(".psd") || resultFileName.EndsWith(".psb"))
                         {
                             resultProperties =
                                 PsdApi.GetImageProperties(
@@ -455,7 +455,7 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
                     }
                     else
                     {
-                        if (!FileIsPdf(response))
+                        if (FileIsPsdOrPdb(response))
                         {
                             resultProperties =
                                 PsdApi.ExtractImageProperties(new ExtractImagePropertiesRequest(response));
@@ -532,26 +532,25 @@ namespace Aspose.Psd.Cloud.Sdk.Test.Base
         }
 
         /// <summary>
-        ///     Checks that stream represents PDF file
+        ///     Checks that stream represents PSD or PSB file
         /// </summary>
         /// <param name="file">The file stream</param>
-        /// <returns><c>true</c> - if file is a PDF, <c>false</c> otherwise</returns>
+        /// <returns><c>true</c> - if file is a PSD or a PSB, <c>false</c> otherwise</returns>
         /// <exception cref="ArgumentNullException"><paramref name="file" /> is null</exception>
-        private bool FileIsPdf(Stream file)
+        private bool FileIsPsdOrPdb(Stream file)
         {
             if (file == null)
                 throw new ArgumentNullException(nameof(file));
 
-            var buffer = new byte[5];
+            var buffer = new byte[4];
             var originalPosition = file.Position;
 
             file.Seek(0, SeekOrigin.Begin);
-            file.Read(buffer, 0, 5);
+            file.Read(buffer, 0, 4);
             file.Seek(originalPosition, SeekOrigin.Begin);
 
             // That's the direct magic bytes check
-            return buffer[0] == 0x25 && buffer[1] == 0x50 && buffer[2] == 0x44 && buffer[3] == 0x46 &&
-                   buffer[4] == 0x2d;
+            return buffer[0] == 0x38 && buffer[1] == 0x42 && buffer[2] == 0x50 && buffer[3] == 0x53;
         }
 
         /// <summary>
